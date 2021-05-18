@@ -1,0 +1,13 @@
+{
+  "defaultTitle": "消费者界面",
+  "usingComponents": {
+    "location": "/pages/handbag/components/location/location",
+    "masonry": "/pages/handbag/components/Masonry/Masonry",
+    "vote": "./components/vote/vote",
+    "commodity-drawer": "/pages/handbag/components/commodity-drawer/commodity-drawer",
+    "search": "/components/Search/Search",
+    "empty": "/components/Empty/Empty",
+    "category-nav": "/components/category-nav/category-nav",
+    "tab": "/components/Tab/Tab"
+  }
+}
