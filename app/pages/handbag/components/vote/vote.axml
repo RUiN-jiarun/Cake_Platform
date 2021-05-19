@@ -8,10 +8,11 @@
     a:for="{{voteData}}"
   >
     <view
-      onTap="onTapCommodity"
+      onTap="onTapVote"
       data-id="{{item.id}}"
       class="vote-item"
       style="flex-direction:{{columns===1?'row':'column'}};"
+      url="/pages/vote/vote"
     >
       <image
         class="vote-item__rank"

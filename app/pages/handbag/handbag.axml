@@ -39,7 +39,8 @@
   <vote
     a:elif="{{activeTabId===VOTE}}"
     voteData="{{currentCommodities}}"
-    onTapCommodity="onTapCommodity"
+    onClick="onClick"
+    
   />
   <empty
     a:else

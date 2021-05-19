@@ -5,14 +5,24 @@ Component({
     voteData: [],
     columns: 1,
     // isRanking: false,
-    onTapCommodity: () => {},
+    // onTapVote: () => {},
+    onTapVote: () =>
+          my.navigateTo({
+            url: '/pages/vote/vote',
+          }),
   },
   didMount() {},
   didUpdate() {},
   didUnmount() {},
   methods: {
-    onTapCommodity(e) {
-      this.props.onTapCommodity(e.target.dataset.id);
+    onTapVote(e) {
+      this.props.onTapVote(e.target.dataset.id);
     },
   },
+  // onListClick(e) {
+  //   // const { onClick } = e.target.dataset.id;
+  //   if (onClick) {
+  //     onClick();
+  //   }
+  // },
 });

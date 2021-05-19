@@ -1,12 +1,12 @@
 {
   "pages": [
     "pages/handbag/handbag",
-    "pages/shopping-cart/shopping-cart",
     "pages/my/my",
     "pages/category/category",
     "pages/search/search",
     "pages/my-order/my-order",
-    "pages/my-ticket/my-ticket"
+    "pages/my-ticket/my-ticket",
+    "pages/vote/vote"
   ],
   "window": {
     "defaultTitle": "",
@@ -23,12 +23,6 @@
         "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
         "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
         "name": "门店商品"
-      },
-      {
-        "pagePath": "pages/shopping-cart/shopping-cart",
-        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*PXYbS4CiYV8AAAAAAAAAAABkARQnAQ",
-        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*lt8nQZUXZV8AAAAAAAAAAABkARQnAQ",
-        "name": "购物车"
       },
       {
         "pagePath": "pages/my/my",

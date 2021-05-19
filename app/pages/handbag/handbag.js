@@ -53,9 +53,12 @@ Page({
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });
   },
-  // onTapVote(id) {
-  //   this.setData({ selectedVoteId: id, showCommodityDrawer: true });
-  // },
+  onTapVote(id) {
+    // this.setData({ selectedVoteId: id, showCommodityDrawer: true });
+    console.log('test1');
+    
+    // return `/pages/vote/vote?id=${id}`;
+  },
   getCommodityDetailPagePath(id) {
     return `/pages/commodity/commodity?id=${id}`;
   },
