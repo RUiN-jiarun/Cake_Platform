@@ -1,12 +1,11 @@
 import { getCommodity } from '../../services/commodity';
 import * as log from '../../utils/log';
-import { ALL, TREND, NEW, LIKE, VOTE } from '../../asserts/CommodityType';
+import { ALL, TREND, LIKE, VOTE } from '../../asserts/CommodityType';
 
 Page({
   data: {
     ALL,
     TREND,
-    NEW,
     LIKE,
     VOTE,
     searchValue: '',
@@ -20,10 +19,7 @@ Page({
         id: TREND,
         title: '人气榜',
       },
-      {
-        id: NEW,
-        title: '新品',
-      },
+      // 删除了新品页面
       {
         id: LIKE,
         title: '猜你喜欢',
@@ -55,7 +51,7 @@ Page({
   },
   onTapVote(id) {
     // this.setData({ selectedVoteId: id, showCommodityDrawer: true });
-    console.log('test1');
+    // console.log('test1');
     
     // return `/pages/vote/vote?id=${id}`;
   },

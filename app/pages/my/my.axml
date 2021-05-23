@@ -19,7 +19,7 @@
       </view>
     </view>
   </view>
-  <scroll-view
+  <!-- <scroll-view
     class="entries"
     scroll-x="{{true}}"
     scroll-y="{{false}}"
@@ -42,7 +42,7 @@
       src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*kYnQR4upMIcAAAAAAAAAAABkARQnAQ"
       mode="scaleToFill"
     />
-  </view>
+  </view> -->
   <block a:for="{{navList}}">
     <list-item
       thumb="{{item.thumb}}"

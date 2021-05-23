@@ -1,5 +1,5 @@
 <view>
-  <title className="title">我的订单</title>
+  <title className="title">我的收藏</title>
   <view
     a:for="{{orderList}}"
     class="order-section"

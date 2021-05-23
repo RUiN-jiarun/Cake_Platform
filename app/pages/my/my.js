@@ -1,44 +1,45 @@
+// 个人中心
 Page({
   data: {
     currentUser: {
-      name: '糙米苏打0905',
+      name: '什么鬼',
       credit: 10,
-      member: '屈臣氏会员',
+      member: '高级会员',
     },
-    entries: [
-      {
-        title: '新人礼遇',
+    // entries: [
+    //   {
+    //     title: '新人礼遇',
 
-        cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*HTNURLN0hv8AAAAAAAAAAABkARQnAQ',
-      },
-      {
-        title: '积分享好礼',
-        cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*8mUFQZnkpX4AAAAAAAAAAABkARQnAQ',
-      },
+    //     cover:
+    //       'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*HTNURLN0hv8AAAAAAAAAAABkARQnAQ',
+    //   },
+    //   {
+    //     title: '积分享好礼',
+    //     cover:
+    //       'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*8mUFQZnkpX4AAAAAAAAAAABkARQnAQ',
+    //   },
 
-      {
-        title: '积分兑好礼',
-        cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*CwXrR4hRcGAAAAAAAAAAAABkARQnAQ',
-      },
+    //   {
+    //     title: '积分兑好礼',
+    //     cover:
+    //       'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*CwXrR4hRcGAAAAAAAAAAAABkARQnAQ',
+    //   },
 
-      {
-        title: '会员特惠',
-        cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*dyvrR6BIbYgAAAAAAAAAAABkARQnAQ',
-      },
+    //   {
+    //     title: '会员特惠',
+    //     cover:
+    //       'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*dyvrR6BIbYgAAAAAAAAAAABkARQnAQ',
+    //   },
 
-      {
-        title: '新人礼遇',
-        cover:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*7G9XQLcv6tYAAAAAAAAAAABkARQnAQ',
-      },
-    ],
+    //   {
+    //     title: '新人礼遇',
+    //     cover:
+    //       'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*7G9XQLcv6tYAAAAAAAAAAABkARQnAQ',
+    //   },
+    // ],
     navList: [
       {
-        name: '我的订单',
+        name: '我的收藏',
         thumb:
           'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Y8BATYqMN78AAAAAAAAAAABkARQnAQ',
         onClick: () =>
@@ -47,12 +48,13 @@ Page({
           }),
       },
       {
-        name: '我的券',
+        name: '新品投递',
         thumb:
           'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9RqXQaxLeCEAAAAAAAAAAABkARQnAQ',
-        onClick: () =>
+        onClick: () => 
           my.navigateTo({
-            url: '/pages/my-ticket/my-ticket',
+            // 未来这里是跳转到一个发起投票的页面
+            url: '/pages/my-order/my-order',
           }),
       },
       {
