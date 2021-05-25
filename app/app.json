@@ -4,8 +4,7 @@
     "pages/my/my",
     "pages/category/category",
     "pages/search/search",
-    "pages/my-order/my-order",
-    "pages/vote/vote"
+    "pages/my-order/my-order"
   ],
   "window": {
     "defaultTitle": "",

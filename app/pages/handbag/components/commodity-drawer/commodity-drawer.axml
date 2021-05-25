@@ -31,34 +31,58 @@
         onSelectOption="onShippingMethodSelect"
       />
     </view>
+
+
     <view class="commodity-divider"></view>
-    <view class="commodity-address">
-      <view class="commodity-address__header">
-        <view class="commodity-address__header-title">
-          配送至
+
+
+    <view class="commodity-detail">
+      <view class="commodity-detail__header">
+        <view class="commodity-detail__header-title">
+          原料说明
         </view>
-        <view class="commodity-address__header-description">
-          地址不同可能会影响商品库存和运费，请正确选择
+        <view class="commodity-detail__header-description">
+          blablabla
         </view>
       </view>
-      <view class="commodity-address__body">
-        <view class="commodity-address__body-left">
+      <view class="commodity-detail__body">
+        <view class="commodity-detail__body-left">
           <image
-            class="commodity-address__body-location"
+            class="commodity-detail__body-location"
             src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
             mode="scaleToFill"
           />
-          <view class="commodity-address__body-detail">
-            {{address}}
+          <view class="commodity-detail__body-detail">
+            {{currentCommodity.raw}}
           </view>
         </view>
-        <image
-          class="nav-icon"
-          src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*yeGUSJlo0gsAAAAAAAAAAABkARQnAQ"
-          mode="scaleToFill"
-        />
       </view>
     </view>
+
+    <view class="commodity-detail">
+      <view class="commodity-detail__header">
+        <view class="commodity-detail__header-title">
+          配料说明
+        </view>
+        <view class="commodity-detail__header-description">
+          blablabla
+        </view>
+      </view>
+      <view class="commodity-detail__body">
+        <view class="commodity-detail__body-left">
+          <image
+            class="commodity-detail__body-location"
+            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            mode="scaleToFill"
+          />
+          <view class="commodity-detail__body-detail">
+            {{currentCommodity.ingredient}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+
     <view class="commodity-divider"></view>
     <view class="commodity-shipping-from">
       <view class="commodity-shipping-from__header">

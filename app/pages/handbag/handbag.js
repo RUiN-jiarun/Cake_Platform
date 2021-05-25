@@ -1,13 +1,12 @@
 import { getCommodity } from '../../services/commodity';
 import * as log from '../../utils/log';
-import { ALL, TREND, LIKE, VOTE } from '../../asserts/CommodityType';
+import { ALL, TREND, LIKE} from '../../asserts/CommodityType';
 
 Page({
   data: {
     ALL,
     TREND,
     LIKE,
-    VOTE,
     searchValue: '',
     tabs: [
       {
@@ -23,10 +22,6 @@ Page({
       {
         id: LIKE,
         title: '猜你喜欢',
-      },
-      {
-        id: VOTE,
-        title: '创意票选',
       },
     ],
     activeTabId: ALL,
@@ -48,12 +43,6 @@ Page({
   },
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });
-  },
-  onTapVote(id) {
-    // this.setData({ selectedVoteId: id, showCommodityDrawer: true });
-    // console.log('test1');
-    
-    // return `/pages/vote/vote?id=${id}`;
   },
   getCommodityDetailPagePath(id) {
     return `/pages/commodity/commodity?id=${id}`;

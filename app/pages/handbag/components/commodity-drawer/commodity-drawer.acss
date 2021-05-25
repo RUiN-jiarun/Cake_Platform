@@ -46,40 +46,40 @@
   border-top: 1rpx solid #eee;
   margin: 20rpx 24rpx;
 }
-.commodity-address {
+.commodity-detail {
   padding: 15rpx 24rpx;
 }
-.commodity-address__header {
+.commodity-detail__header {
   display: flex;
   align-items: center;
 }
-.commodity-address__header-title {
+.commodity-detail__header-title {
   font-size: 28rpx;
   color: #333;
   margin-right: 23rpx;
 }
-.commodity-address__header-description {
+.commodity-detail__header-description {
   font-size: 22rpx;
   color: #999;
   line-height: 20rpx;
 }
-.commodity-address__body {
+.commodity-detail__body {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 36rpx 0 15rpx;
 }
-.commodity-address__body-left {
+.commodity-detail__body-left {
   display: flex;
   align-items: center;
 }
-.commodity-address__body-location {
+.commodity-detail__body-location {
   flex-shrink: 0;
   width: 21rpx;
   height: 26rpx;
   margin-right: 16rpx;
 }
-.commodity-address__body-detail {
+.commodity-detail__body-detail {
   font-size: 26rpx;
   color: #333;
   line-height: 26rpx;

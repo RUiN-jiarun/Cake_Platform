@@ -113,10 +113,6 @@ export const trendCommodity = {
   ],
 };
 
-export const newCommodity = {
-
-};
-
 export const likeCommodity = {
   data: [
     {
@@ -167,27 +163,33 @@ export const likeCommodity = {
   ],
 };
 
-export const votePage = {
-  data: [
-    {
-      id: 0,
-      cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "A创意票选版",
-      // canSelfPickUp: true,
-      // price: 39,
-      // sales: 30,
-    }
-
-  ],
-};
-
 // 这里是详情
 export const commodityDetail = {
   data: {
     cover:
       "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Gru4R66jmTcAAAAAAAAAAABkARQnAQ",
-    commodityName: "蛋糕",
+    commodityName: "贼好吃的提拉米苏",
+    tags: [
+      {
+        id: 1,
+        name: "外观",
+      },
+      {
+        id: 2,
+        name: "原料",
+      },
+      {
+        id: 3,
+        name: "主题",
+      },
+    ],
+    raw: '原料',
+    ingredient: '配料',
+    subject: '主题',
+    appearance: '外观',
+    idea: '灵感',
+    like: '赞',
+
     price: 911,
     storage: 774,
     type: "浅橙色，S",
