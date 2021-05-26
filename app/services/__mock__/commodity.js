@@ -173,14 +173,17 @@ export const commodityDetail = {
       {
         id: 1,
         name: "外观",
+        num: 3,
       },
       {
         id: 2,
         name: "原料",
+        num: 2,
       },
       {
         id: 3,
         name: "主题",
+        num: 8,
       },
     ],
     raw: '原料',
@@ -196,11 +199,15 @@ export const commodityDetail = {
     shippingMethod: [
       {
         id: 1,
-        name: "送货到家",
+        name: "这是一句很长很长的标签",
+        num: 3,
+        color: '',
       },
       {
         id: 2,
-        name: "门店自提",
+        name: "短的",
+        num: 13,
+        color: '',
       },
     ],
     shippingFrom: {

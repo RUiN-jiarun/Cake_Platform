@@ -117,7 +117,7 @@
       </view>
     </view>
     <view class="commodity-divider"></view>
-    <view class="commodity-option">
+    <!-- <view class="commodity-option">
       <view
         a:for="{{currentCommodity.options}}"
         class="commodity-option-item"
@@ -134,7 +134,7 @@
           />
         </view>
       </view>
-    </view>
+    </view> -->
     <view class="commodity-divider"></view>
     <view class="commodity-purchase-number">
       <view class="commodity-purchase-number__header">

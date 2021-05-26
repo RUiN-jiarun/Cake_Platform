@@ -3,6 +3,6 @@
     "ainstall": "npm install --registry=https://registry.npm.taobao.org"
   },
   "dependencies": {
-    "mini-antui": "^0.4.29"
+    "mini-antui": "^0.4.35"
   }
 }

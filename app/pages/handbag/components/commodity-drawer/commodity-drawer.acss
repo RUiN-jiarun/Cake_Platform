@@ -3,8 +3,8 @@
   padding: 32rpx 24rpx 36rpx;
 }
 .commodity-info__cover {
-  width: 220rpx;
-  height: 220rpx;
+  width: 300rpx;
+  height: 300rpx;
   flex-shrink: 0;
 }
 .commodity-info__right {
