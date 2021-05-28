@@ -4,7 +4,7 @@ import * as log from '../../../../utils/log';
 Component({
   mixins: [],
   data: {
-    selectedShippingMethodId: '',
+    selectedTagId: '',
     selectedOptionIds: [],
     currentCommodity: {},
     purchaseNumber: 1,
@@ -33,7 +33,7 @@ Component({
         .then(({ data }) =>
           this.setData({
             currentCommodity: data,
-            selectedShippingMethodId: this.getFirstId(data.shippingMethod),
+            selectedTagId: this.getFirstId(data.Tag),
             selectedOptionIds: data.options.map(item =>
               this.getFirstId(item.values)
             ),
@@ -52,8 +52,8 @@ Component({
       }
       return null;
     },
-    onShippingMethodSelect(id) {
-      this.setData({ selectedShippingMethodId: id });
+    onTagSelect(id) {
+      this.setData({ selectedTagId: id });
     },
     onOptionSelect(id, index) {
       const nextSelectedOptionIds = [...this.data.selectedOptionIds];

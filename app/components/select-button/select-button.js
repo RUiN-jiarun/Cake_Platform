@@ -9,33 +9,33 @@ Component({
   },
   onInit() {
     var tags = this.props.options;
-    console.log(tags);
     for (var i=0, len=tags.length; i < len; i++) {
-      console.log(tags[i]);
+      // console.log(tags[i]);
       tags[i].color = this.getColor(1,50,tags[i].num);
-      console.log(tags[i]);
+      // console.log(tags[i]);
     }
   },
   didMount() {
     
-    
   },
   didUpdate() {
-    // var tags = this.props.options;
-    // console.log(tags);
-    // for (var i=0, len=tags.length; i < len; i++) {
-    //   console.log(tags[i]);
-    //   tags[i].color = this.getColor(1,50,tags[i].num);
-    // }
+    var tags = this.props.options;
+    for (var i=0, len=tags.length; i < len; i++) {
+      // console.log(tags[i]);
+      tags[i].color = this.getColor(1,50,tags[i].num);
+      // console.log(tags[i]);
+    }
   },
   didUnmount() {},
   
   methods: {
     onSelectOption(e) {
-      // console.log(this);
-      // console.log(this.props.options[e.target.dataset.id-1].num);
-      // var curNum = this.props.options[e.target.dataset.id-1].num;
-      this.props.onSelectOption(e.target.dataset.id, this.props.identifyId);
+      // console.log(e.target);
+      // console.log(this.props.options[e.target.id-1].num);
+      // this.props.options[e.target.id-1].num++;
+      
+      this.props.onSelectOption(e.target.id, this.props.identifyId);
+    
       // var color = this.getColor(1,50,curNum);
       // console.log(color);
     },

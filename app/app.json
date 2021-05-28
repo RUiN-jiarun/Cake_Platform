@@ -4,7 +4,8 @@
     "pages/my/my",
     "pages/category/category",
     "pages/search/search",
-    "pages/my-order/my-order"
+    "pages/my-order/my-order",
+    "pages/my-vote/my-vote"
   ],
   "window": {
     "defaultTitle": "",
@@ -21,6 +22,12 @@
         "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
         "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
         "name": "新品界面"
+      },
+      {
+        "pagePath": "pages/handbag/handbag",
+        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
+        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
+        "name": "发起创意"
       },
       {
         "pagePath": "pages/my/my",

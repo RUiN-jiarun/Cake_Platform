@@ -11,7 +11,7 @@
     <view
       id="{{item.id}}"
       onTap="onSelectOption"
-      class="select-item"
+      class="select-item {{selectedOptionId===item.id?'select-item--active':''}}"
       style="background : {{item.color}};"
     >
       {{item.name}} ({{item.num}})

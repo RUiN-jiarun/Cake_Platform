@@ -39,13 +39,17 @@
   line-height: 24rpx;
   margin-top: 40rpx;
 }
-.commodity-shipping-method {
+
+/* 标签 */
+.commodity-tag {
   padding: 21rpx 24rpx 10rpx;
 }
 .commodity-divider {
   border-top: 1rpx solid #eee;
   margin: 20rpx 24rpx;
 }
+
+/* 文字说明 */
 .commodity-detail {
   padding: 15rpx 24rpx;
 }
@@ -140,6 +144,8 @@
   line-height: 26rpx;
   margin-right: 25rpx;
 }
+
+/* 选项 */
 .commodity-option {
   padding: 10rpx 24rpx;
 }
@@ -150,6 +156,8 @@
 .commodity-option-item__value {
   padding: 20rpx 0;
 }
+
+/* 购买 */
 .commodity-purchase-number {
   padding: 10rpx 24rpx 40rpx;
   display: flex;
@@ -168,6 +176,8 @@
   color: #999;
   line-height: 20rpx;
 }
+
+/* 确定按钮————改编成收藏按钮或投票按钮 */
 .commodity-confirm {
   background-image: linear-gradient(90deg, #ff9000 0%, #ff5000 100%);
   border-radius: 100000rpx;
@@ -176,6 +186,8 @@
   color: #fff;
   margin: 10rpx 24rpx 40rpx;
   text-align: center;
+  width: fit-content;
+  display: inline-block;
 }
 .nav-icon {
   flex-shrink: 0;

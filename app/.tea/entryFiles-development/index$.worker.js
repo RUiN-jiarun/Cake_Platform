@@ -53,6 +53,7 @@ require('../../pages/my/my?hash=3e2e5e2d473d03821badb5452a72c12422f436f6');
 require('../../pages/category/category?hash=132dec136945b3b0a66fc76febf44a6e21f01fee');
 require('../../pages/search/search?hash=ef4fb84887010afe7b7bb71b7080a3b22dd7a410');
 require('../../pages/my-order/my-order?hash=132dec136945b3b0a66fc76febf44a6e21f01fee');
+require('../../pages/my-vote/my-vote?hash=132dec136945b3b0a66fc76febf44a6e21f01fee');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

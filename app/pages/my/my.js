@@ -48,13 +48,13 @@ Page({
           }),
       },
       {
-        name: '新品投递',
+        name: '我的创意',
         thumb:
           'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9RqXQaxLeCEAAAAAAAAAAABkARQnAQ',
         onClick: () => 
           my.navigateTo({
-            // 未来这里是跳转到一个发起投票的页面
-            url: '/pages/my-order/my-order',
+            // 未来这里是跳转到一个查看自己发起的投票的页面
+            url: '/pages/my-vote/my-vote',
           }),
       },
       {

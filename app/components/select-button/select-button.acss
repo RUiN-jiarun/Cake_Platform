@@ -16,8 +16,8 @@
   color: #333;
   border: 1rpx solid #f6f6f6;
 }
-/* .select-item--active {
-  background: #fff9f9;
+.select-item--active {
+  /* background: #fff9f9; */
   border: 1rpx solid #ff5000;
-  color: #ff5000;
-} */
+  /* color: #ff5000; */
+}
