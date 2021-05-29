@@ -1,0 +1,9 @@
+<view>
+
+  <view>
+    <image
+        src="{{currentCommodity.cover}}"
+        mode="scaleToFill"
+      />
+  </view>
+</view>

@@ -1,9 +1,10 @@
+/**! __CODEPLACEHOLDER_START__ */ /*[PositionForHostEntryCodeBegin]*/ /**! __CODEPLACEHOLDER_END__ */
 if(!self.__appxInited) {
 self.__appxInited = 1;
 require('@alipay/appx-compiler/lib/sjsEnvInit');
 
 require('./config$');
-
+require('./importScripts$');
 
       function getUserAgentInPlatformWeb() {
         return typeof navigator !== 'undefined' ? navigator.swuserAgent || navigator.userAgent || '' : '';
@@ -45,10 +46,11 @@ require('../../components/Search/Search?hash=05d2a9730dd6009bf9446182f9c985f40f8
 require('../../components/Empty/Empty?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../components/category-nav/category-nav?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../components/Tab/Tab?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
+require('../../pages/handbag/components/pic-detail/pic-detail?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../node_modules/mini-antui/es/list/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../node_modules/mini-antui/es/list/list-item/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../components/Title/Title?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
-require('../../pages/handbag/handbag?hash=3788ffc7fd93eec2066b005a8126ba6c2fa6959f');
+require('../../pages/handbag/handbag?hash=5c3cfff1b3ed0eee72c1ae8620d9ef7105125e8b');
 require('../../pages/my/my?hash=3e2e5e2d473d03821badb5452a72c12422f436f6');
 require('../../pages/category/category?hash=132dec136945b3b0a66fc76febf44a6e21f01fee');
 require('../../pages/search/search?hash=ef4fb84887010afe7b7bb71b7080a3b22dd7a410');

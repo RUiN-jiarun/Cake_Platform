@@ -7,6 +7,7 @@
     "search": "/components/Search/Search",
     "empty": "/components/Empty/Empty",
     "category-nav": "/components/category-nav/category-nav",
-    "tab": "/components/Tab/Tab"
+    "tab": "/components/Tab/Tab",
+    "pic-detail": "/pages/handbag/components/pic-detail/pic-detail"
   }
 }

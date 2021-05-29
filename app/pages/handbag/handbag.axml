@@ -8,6 +8,10 @@
   onClose="onCloseCommodityDrawer"
   onConfirm="onConfirm"
 />
+<pic-detail
+  show="{{showPicDetail}}"
+
+/>
 <view disable-scroll="{{showCommodityDrawer}}">
 
   <!-- <location /> -->
@@ -34,7 +38,7 @@
     columns="{{activeTabId===TREND?1:2}}"
     isRanking="{{activeTabId===TREND}}"
     masonryData="{{currentCommodities}}"
-    onTapCommodity="onTapCommodity"
+    onTapCommodity="{{activeTabId===ALL?'onTapPic':'onTapCommodity'}}"
   />
   <empty
     a:else

@@ -28,6 +28,7 @@ Page({
     currentCommodities: [],
     selectedCommodityId: '',
     showCommodityDrawer: false,
+    showPicDetail: false,
   },
   onShow() {
     const { searchValue = '' } = getApp();
@@ -40,6 +41,9 @@ Page({
   },
   onTapCommodity(id) {
     this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+  },
+  onTapPic(id) {
+    this.setData({ selectedCommodityId: id, showPicDetail: true });
   },
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });
@@ -66,10 +70,10 @@ Page({
       );
   },
   onConfirm() {
-    this.onCloseCommodityDrawer();
+    // this.onCloseCommodityDrawer();
     my.showToast({
       type: 'success',
-      content: '添加成功，在购物车等亲',
+      content: '收藏成功',
       duration: 3000,
     });
   },
