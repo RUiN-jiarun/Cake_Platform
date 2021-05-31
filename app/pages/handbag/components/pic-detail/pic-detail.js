@@ -1,3 +1,6 @@
+// 查看瀑布流里的图片的详情
+// 这里根据支付宝小程序查看图片的相关API修改吧
+// 可以参考 https://www.w3cschool.cn/aliminiapp/aliminiapp-8ut228vk.html
 import { getCommodityDetail } from '../../../../services/commodity';
 import * as log from '../../../../utils/log';
 

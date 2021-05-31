@@ -50,12 +50,16 @@ require('../../pages/handbag/components/pic-detail/pic-detail?hash=05d2a9730dd60
 require('../../node_modules/mini-antui/es/list/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../node_modules/mini-antui/es/list/list-item/index?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../components/Title/Title?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
+require('../../pages/my-ticket/components/tab/tab?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
+require('../../pages/my-ticket/components/ticket/ticket?hash=05d2a9730dd6009bf9446182f9c985f40f8c0f43');
 require('../../pages/handbag/handbag?hash=5c3cfff1b3ed0eee72c1ae8620d9ef7105125e8b');
 require('../../pages/my/my?hash=3e2e5e2d473d03821badb5452a72c12422f436f6');
 require('../../pages/category/category?hash=132dec136945b3b0a66fc76febf44a6e21f01fee');
 require('../../pages/search/search?hash=ef4fb84887010afe7b7bb71b7080a3b22dd7a410');
 require('../../pages/my-order/my-order?hash=132dec136945b3b0a66fc76febf44a6e21f01fee');
 require('../../pages/my-vote/my-vote?hash=132dec136945b3b0a66fc76febf44a6e21f01fee');
+require('../../pages/new-vote/new-vote?hash=32d7d2807ed4e666ef03b4b3fe8c38ecf2e34e68');
+require('../../pages/my-ticket/my-ticket?hash=5cbcbd88ecc7642955f3d3ee95e06e8eb58cac86');
 }
 self.bootstrapApp ? self.bootstrapApp({ success }) : success();
 }

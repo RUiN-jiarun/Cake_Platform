@@ -11,12 +11,12 @@ Page({
     tabs: [
       {
         id: ALL,
-        title: '综合',
+        title: '创意瀑布流',
         sortable: true,   // 可排序
       },
       {
         id: TREND,
-        title: '人气榜',
+        title: '新品人气榜',
       },
       // 删除了新品页面
       {
