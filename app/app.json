@@ -5,7 +5,9 @@
     "pages/category/category",
     "pages/search/search",
     "pages/my-order/my-order",
-    "pages/my-vote/my-vote"
+    "pages/my-vote/my-vote",
+    "pages/new-vote/new-vote",
+    "pages/my-ticket/my-ticket"
   ],
   "window": {
     "defaultTitle": "",
@@ -24,7 +26,7 @@
         "name": "新品界面"
       },
       {
-        "pagePath": "pages/handbag/handbag",
+        "pagePath": "pages/new-vote/new-vote",
         "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
         "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
         "name": "发起创意"

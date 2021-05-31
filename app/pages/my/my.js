@@ -58,6 +58,15 @@ Page({
           }),
       },
       {
+        name: '我的奖券',
+        thumb:
+          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9RqXQaxLeCEAAAAAAAAAAABkARQnAQ',
+        onClick: () =>
+          my.navigateTo({
+            url: '/pages/my-ticket/my-ticket',
+          }),
+      },
+      {
         name: '关于',
         thumb:
           'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*-Lp1TZDggnoAAAAAAAAAAABkARQnAQ',

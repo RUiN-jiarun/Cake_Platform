@@ -1,4 +1,4 @@
-/* 这里是商品页的css格式编辑 */
+/* 这里是投票页的css格式编辑 */
 .masonry {
   padding: 0 8rpx;
   display: grid;
