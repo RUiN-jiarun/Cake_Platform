@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "title": "/components/Title/Title",
+    "commodity-drawer": "/pages/handbag/components/commodity-drawer/commodity-drawer"
+  }
+}

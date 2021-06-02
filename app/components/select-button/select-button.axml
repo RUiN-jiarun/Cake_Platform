@@ -1,0 +1,20 @@
+<view class="select-group">
+  <view
+    a:for="{{options}}"
+    class="select-col"
+  >
+    <!-- <view
+      data-id="{{item.id}}"
+      onTap="onSelectOption"
+      class="select-item {{selectedOptionId===item.id?'select-item--active':''}}"
+    > -->
+    <view
+      id="{{item.id}}"
+      onTap="onSelectOption"
+      class="select-item {{selectedOptionId===item.id?'select-item--active':''}}"
+      style="background : {{item.color}};"
+    >
+      {{item.name}} ({{item.num}})
+    </view>
+  </view>
+</view>

@@ -1,0 +1,12 @@
+.pic-box{
+  box-shadow: rgb(168, 156, 122);
+  border-color: rgb(141, 111, 56);
+  display: flex; height: 465px; width: 319px;
+  justify-content: center; 
+  z-index: 1;
+}
+.pic-img{
+  justify-content: center; 
+  margin-top:auto;
+  margin-bottom: auto;
+}

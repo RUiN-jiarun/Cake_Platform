@@ -1,0 +1,43 @@
+{
+  "pages": [
+    "pages/handbag/handbag",
+    "pages/my/my",
+    "pages/category/category",
+    "pages/search/search",
+    "pages/my-order/my-order",
+    "pages/my-vote/my-vote",
+    "pages/new-vote/new-vote",
+    "pages/my-ticket/my-ticket"
+  ],
+  "window": {
+    "defaultTitle": "",
+    "titleBarColor": "#fff",
+    "pullRefresh": false
+  },
+  "tabBar": {
+    "textColor": "#333333",
+    "selectedColor": "#009D9A",
+    "backgroundColor": "#f2f2f2",
+    "items": [
+      {
+        "pagePath": "pages/handbag/handbag",
+        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
+        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
+        "name": "新品界面"
+      },
+      {
+        "pagePath": "pages/new-vote/new-vote",
+        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
+        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
+        "name": "发起创意"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*n1f8SYBo_RkAAAAAAAAAAABkARQnAQ",
+        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*q2eOQpQEzDsAAAAAAAAAAABkARQnAQ",
+        "name": "个人中心"
+      }
+    ]
+  },
+  "debug": true
+}

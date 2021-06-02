@@ -1,0 +1,36 @@
+<commodity-drawer
+  commodityId="{{selectedCommodityId}}"
+  show="{{showCommodityDrawer}}"
+  onClose="onCloseCommodityDrawer"
+  onConfirm="onConfirm"
+/>
+<view disable-scroll="{{showCommodityDrawer}}">
+  <title className="title">我的收藏</title>
+  <view a:for="{{loveList}}" class="order-section">
+    <view class="order-section-header">
+      <view class="order-section-header__time">{{item.time}}</view>
+      <!--<view class="order-section-header__state">{{item.state}}</view> -->
+    </view>
+    <view class="order-section-body" a:for="{{item.bakeIdeas}}" a:for-item="eachIdea">
+      <image class="order-section-body__image" lazy-load="{{true}}" src="{{eachIdea.image}}" mode="scaleToFill" />
+      <view class="order-section-body__middle">
+        <view class="order-section-body__title">
+          {{eachIdea.title}}
+        </view>
+        <view class="order-section-body__tag" a:for="{{eachIdea.tag}}" a:for-item="eachTag">
+          {{eachTag}}
+        </view>
+      </view>
+      <view class="order-section-body__right">
+        <view class="order-section-body__price">{{eachIdea.voteCount}}票</view>
+
+        <button class="order-section-body__moreInfo-button" data-attr="{{eachIdea.id}}" onTap="onClickMe" >
+          <text class="more-icon">▪▪▪</text>
+        </button>
+
+        <!--<view class="order-section-body__num">x{{eachCommodity.num}}</view> -->
+      </view>
+    </view>
+    <!--<view class="order-section-footer"><view class="order-section-footer__total">共{{item.total}}件商品</view><view class="order-section-footer__desc">合计：¥</view><view class="order-section-footer__sum">{{item.sum}}</view></view> -->
+  </view>
+</view>

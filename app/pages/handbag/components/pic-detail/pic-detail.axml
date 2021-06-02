@@ -1,0 +1,6 @@
+<view>
+  <view class="pic-box">
+    <image src="{{currentCommodity.cover}}" mode="scaleToFill" class="pic-img"/>
+  </view>
+</view>
+
