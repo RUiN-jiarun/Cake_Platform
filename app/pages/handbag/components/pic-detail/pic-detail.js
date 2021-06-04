@@ -22,6 +22,7 @@ Component({
     if (preProps.commodityId !== commodityId) {
       this.fetchCommodityDetailById(commodityId);
     }
+
   },
   didUnmount() {},
   methods: {
@@ -55,5 +56,6 @@ Component({
     onTagSelect(id) {
       this.setData({ selectedTagId: id });
     },
+
   },
 });

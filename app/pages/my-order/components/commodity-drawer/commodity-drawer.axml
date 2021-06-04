@@ -1,0 +1,188 @@
+<!-- 这里是商品详细信息的界面展示，现在是以购物车的形式表现的 -->
+<!-- currentCommodity对应了../../services/__mock__/commodity.js中的commodityDetail -->
+<drawer
+  show="{{show}}"
+  onClose="onClose"
+>
+  <view
+    a:if="{{currentCommodity.options}}"
+    class="commodity"
+  >
+    <view class="commodity-info">
+      <image
+        class="commodity-info__cover"
+        src="{{currentCommodity.cover}}"
+        mode="scaleToFill"
+      />
+      <view class="commodity-info__right">
+        <view class="commodity-info__name">{{currentCommodity.commodityName}}</view>
+        <view class="commodity-info__price-section">
+          <view class="commodity-info__price-icon">¥</view>
+          <view class="commodity-info__price">{{currentCommodity.price}}</view>
+        </view>
+        <view class="commodity-info__storage">库存{{currentCommodity.storage}}件</view>
+        <view class="commodity-info__type">已选：{{currentCommodity.type}}</view>
+      </view>
+    </view>
+    <view class="commodity-tag">
+      <select-button
+        selectedOptionId="{{selectedTagId}}"
+        options="{{currentCommodity.tags}}"
+        onSelectOption="onTagSelect"
+      />
+    </view>
+
+
+    <view class="commodity-divider"></view>
+
+
+    <view class="commodity-detail">
+      <view class="commodity-detail__header">
+        <view class="commodity-detail__header-title">
+          原料说明
+        </view>
+        <view class="commodity-detail__header-description">
+          blablabla
+        </view>
+      </view>
+      <view class="commodity-detail__body">
+        <view class="commodity-detail__body-left">
+          <image
+            class="commodity-detail__body-location"
+            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            mode="scaleToFill"
+          />
+          <view class="commodity-detail__body-detail">
+            {{currentCommodity.raw}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="commodity-detail">
+      <view class="commodity-detail__header">
+        <view class="commodity-detail__header-title">
+          配料说明
+        </view>
+        <view class="commodity-detail__header-description">
+          blablabla
+        </view>
+      </view>
+      <view class="commodity-detail__body">
+        <view class="commodity-detail__body-left">
+          <image
+            class="commodity-detail__body-location"
+            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            mode="scaleToFill"
+          />
+          <view class="commodity-detail__body-detail">
+            {{currentCommodity.ingredient}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="commodity-detail">
+      <view class="commodity-detail__header">
+        <view class="commodity-detail__header-title">
+          主题说明
+        </view>
+        <view class="commodity-detail__header-description">
+          blablabla
+        </view>
+      </view>
+      <view class="commodity-detail__body">
+        <view class="commodity-detail__body-left">
+          <image
+            class="commodity-detail__body-location"
+            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            mode="scaleToFill"
+          />
+          <view class="commodity-detail__body-detail">
+            {{currentCommodity.ingredient}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="commodity-detail">
+      <view class="commodity-detail__header">
+        <view class="commodity-detail__header-title">
+          外观说明
+        </view>
+        <view class="commodity-detail__header-description">
+          blablabla
+        </view>
+      </view>
+      <view class="commodity-detail__body">
+        <view class="commodity-detail__body-left">
+          <image
+            class="commodity-detail__body-location"
+            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            mode="scaleToFill"
+          />
+          <view class="commodity-detail__body-detail">
+            {{currentCommodity.ingredient}}
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class="commodity-divider"></view>
+
+
+    <view class="commodity-divider"></view>
+
+    <!-- <view class="commodity-option">
+      <view
+        a:for="{{currentCommodity.options}}"
+        class="commodity-option-item"
+      >
+        <view class="commodity-option-item__title">
+          {{item.name}}
+        </view>
+        <view class="commodity-option-item__value">
+          <select-button
+            selectedOptionId="{{selectedOptionIds[index]}}"
+            options="{{item.values}}"
+            identifyId="{{index}}"
+            onSelectOption="onOptionSelect"
+          />
+        </view>
+      </view>
+    </view> -->
+
+    <view class="commodity-divider"></view>
+
+    <!-- <view class="commodity-purchase-number">
+      <view class="commodity-purchase-number__header">
+        <view class="commodity-purchase-number__title">
+          购买数量
+        </view>
+        <view class="commodity-purchase-number__description">
+          （仅支持{{currentCommodity.maxPurchaseNumber}}倍购买）
+        </view>
+      </view>
+      <purchase-number
+        value="{{purchaseNumber}}"
+        max="{{currentCommodity.maxPurchaseNumber}}"
+        onChange="onPurchaseNumberChange"
+      >
+    </view> -->
+    
+    <view style="text-align:center"> 
+      <view
+        class="commodity-confirm"
+        onTap="onConfirm"
+      >     
+        收藏
+      </view>
+      <view
+        class="commodity-confirm"
+        onTap="onConfirm"
+      >
+        投票
+      </view>
+    </view>
+  </view>
+</drawer>

@@ -18,7 +18,7 @@ export const allCommodity = {
     {
       id: 0,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
+        "http://img14.360buyimg.com/n0/jfs/t580/164/187882852/142497/d6f4d6ca/5455a0efNb7c637f9.jpg",
       title: "蛋糕1",
       canSelfPickUp: true,
       price: 669,
@@ -27,7 +27,7 @@ export const allCommodity = {
     {
       id: 1,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
+        "https://img01.yzcdn.cn/upload_files/2019/08/12/Fqd51ClOvIWoyR_iHokW2ETQ70YD.jpg!large.webp",
       title: "蛋糕2",
       canSelfPickUp: true,
       price: 669,
@@ -36,7 +36,7 @@ export const allCommodity = {
     {
       id: 2,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
+        "https://img01.yzcdn.cn/upload_files/2018/02/01/Fn-vfcw2wdrL_LZzoPeY1D7HUQE3.jpg!large.webp",
       title: "蛋糕3",
       canSelfPickUp: false,
       price: 669,
@@ -45,7 +45,7 @@ export const allCommodity = {
     {
       id: 3,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
+        "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2563999519,2928542426&fm=26&gp=0.jpg",
       title: "蛋糕4",
       canSelfPickUp: true,
       price: 669,
@@ -54,7 +54,7 @@ export const allCommodity = {
     {
       id: 4,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*_51UQr4yZMgAAAAAAAAAAABkARQnAQ",
+        "https://img01.yzcdn.cn/upload_files/2017/12/29/Fr5UOYsGAxzWQiWFipG3eoBUiHtC.jpg!large.webp",
       title: "蛋糕5",
       canSelfPickUp: false,
       price: 669,
@@ -68,7 +68,7 @@ export const trendCommodity = {
     {
       id: 0,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
+        "http://img14.360buyimg.com/n0/jfs/t580/164/187882852/142497/d6f4d6ca/5455a0efNb7c637f9.jpg",
       title: "No.1蛋糕",
       canSelfPickUp: true,
       price: 39,
@@ -77,7 +77,7 @@ export const trendCommodity = {
     {
       id: 1,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
+        "https://img01.yzcdn.cn/upload_files/2019/08/12/Fqd51ClOvIWoyR_iHokW2ETQ70YD.jpg!large.webp",
       title: "No.2蛋糕",
       canSelfPickUp: true,
       price: 39,
@@ -86,7 +86,7 @@ export const trendCommodity = {
     {
       id: 2,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
+        "https://img01.yzcdn.cn/upload_files/2018/02/01/Fn-vfcw2wdrL_LZzoPeY1D7HUQE3.jpg!large.webp",
       title: "烂蛋糕",
       canSelfPickUp: false,
       price: 30,
@@ -95,7 +95,7 @@ export const trendCommodity = {
     {
       id: 3,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
+        "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2563999519,2928542426&fm=26&gp=0.jpg",
       title: "烂蛋糕",
       canSelfPickUp: true,
       price: 30,
@@ -104,7 +104,7 @@ export const trendCommodity = {
     {
       id: 4,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
+        "https://img01.yzcdn.cn/upload_files/2017/12/29/Fr5UOYsGAxzWQiWFipG3eoBUiHtC.jpg!large.webp",
       title: "垃圾蛋糕",
       canSelfPickUp: false,
       price: 30,
@@ -136,7 +136,7 @@ export const likeCommodity = {
     {
       id: 2,
       cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
+        "https://img01.yzcdn.cn/upload_files/2018/02/01/Fn-vfcw2wdrL_LZzoPeY1D7HUQE3.jpg!large.webp",
       title: "烂蛋糕",
       canSelfPickUp: false,
       price: 30,
@@ -167,7 +167,7 @@ export const likeCommodity = {
 export const commodityDetail = {
   data: {
     cover:
-      "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Gru4R66jmTcAAAAAAAAAAABkARQnAQ",
+      "https://img01.yzcdn.cn/upload_files/2018/02/01/Fn-vfcw2wdrL_LZzoPeY1D7HUQE3.jpg!large.webp",
     commodityName: "贼好吃的提拉米苏",
     tags: [
       {

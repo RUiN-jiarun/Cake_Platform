@@ -56,6 +56,7 @@ Component({
       this.setData({ selectedTagId: id });
     },
     onOptionSelect(id, index) {
+      console.log("option select");
       const nextSelectedOptionIds = [...this.data.selectedOptionIds];
       nextSelectedOptionIds[index] = id;
       this.setData({ selectedOptionIds: nextSelectedOptionIds });

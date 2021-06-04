@@ -8,6 +8,7 @@
     "empty": "/components/Empty/Empty",
     "category-nav": "/components/category-nav/category-nav",
     "tab": "/components/Tab/Tab",
-    "pic-detail": "/pages/handbag/components/pic-detail/pic-detail"
+    "pic-detail": "/pages/handbag/components/pic-detail/pic-detail",
+    "modal": "mini-ali-ui/es/modal/index"    
   }
 }

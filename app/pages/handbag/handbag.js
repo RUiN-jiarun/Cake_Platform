@@ -43,10 +43,15 @@ Page({
     this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
   },
   onTapPic(id) {
+    console.log("点击了图片详情");
     this.setData({ selectedCommodityId: id, showPicDetail: true });
   },
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });
+  },
+  onModalClick3(){
+    // 关闭图片详情页-不要改函数名-这是自带组件
+    this.setData({ showPicDetail: false });
   },
   getCommodityDetailPagePath(id) {
     return `/pages/commodity/commodity?id=${id}`;
