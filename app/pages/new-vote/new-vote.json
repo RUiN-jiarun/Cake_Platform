@@ -1,1 +1,8 @@
-{}
+{
+  "defaultTitle": "发起创意",
+  "backgroundColor": "#ffffff",
+  "usingComponents": {
+    "list": "mini-antui/es/list/index",
+    "list-item": "mini-antui/es/list/list-item/index"
+  }
+}

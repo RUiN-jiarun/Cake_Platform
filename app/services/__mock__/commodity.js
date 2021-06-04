@@ -4,7 +4,7 @@ export const searchTrend = {
     "蛋糕",
     "蛋糕",
     "蛋糕",
-    "你妈的蛋糕",
+    "蛋糕",
     "蛋糕",
     "蛋糕",
     "蛋糕",
@@ -20,45 +20,304 @@ export const allCommodity = {
       cover:
         "http://img14.360buyimg.com/n0/jfs/t580/164/187882852/142497/d6f4d6ca/5455a0efNb7c637f9.jpg",
       title: "蛋糕1",
-      canSelfPickUp: true,
-      price: 669,
-      sales: 1589,
+      tags: [
+        {
+          id: 1,
+          name: "外观",
+          num: 3,
+        },
+        {
+          id: 2,
+          name: "原料",
+          num: 2,
+        },
+        {
+          id: 3,
+          name: "主题",
+          num: 8,
+        },
+      ],
+      raw: '原料',
+      ingredient: '配料',
+      subject: '主题',
+      appearance: '外观',
+      idea: '灵感',
+      like: '赞',
+
+      
+      options: [
+        {
+          id: 1,
+          name: "净含量",
+          values: [
+            {
+              id: 1,
+              name: "500ml",
+            },
+            {
+              id: 2,
+              name: "600ml",
+            },
+          ],
+        },
+        {
+          id: 2,
+          name: "颜色",
+          values: [
+            {
+              id: 1,
+              name: "红色",
+            },
+            {
+              id: 2,
+              name: "绿色",
+            },
+          ],
+        },
+      ],
     },
     {
       id: 1,
       cover:
         "https://img01.yzcdn.cn/upload_files/2019/08/12/Fqd51ClOvIWoyR_iHokW2ETQ70YD.jpg!large.webp",
       title: "蛋糕2",
-      canSelfPickUp: true,
-      price: 669,
-      sales: 1589,
+      tags: [
+        {
+          id: 1,
+          name: "外观",
+          num: 10,
+        },
+        {
+          id: 2,
+          name: "原料",
+          num: 2,
+        },
+        {
+          id: 3,
+          name: "主题",
+          num: 1,
+        },
+      ],
+      raw: '原料',
+      ingredient: '配料',
+      subject: '主题',
+      appearance: '外观',
+      idea: '灵感',
+      like: '赞',
+
+      options: [
+        {
+          id: 1,
+          name: "净含量",
+          values: [
+            {
+              id: 1,
+              name: "500ml",
+            },
+            {
+              id: 2,
+              name: "600ml",
+            },
+          ],
+        },
+        {
+          id: 2,
+          name: "颜色",
+          values: [
+            {
+              id: 1,
+              name: "红色",
+            },
+            {
+              id: 2,
+              name: "绿色",
+            },
+          ],
+        },
+      ],
     },
     {
       id: 2,
       cover:
         "https://img01.yzcdn.cn/upload_files/2018/02/01/Fn-vfcw2wdrL_LZzoPeY1D7HUQE3.jpg!large.webp",
       title: "蛋糕3",
-      canSelfPickUp: false,
-      price: 669,
-      sales: 1589,
+            tags: [
+        {
+          id: 1,
+          name: "外观",
+          num: 3,
+        },
+        {
+          id: 2,
+          name: "原料",
+          num: 2,
+        },
+        {
+          id: 3,
+          name: "主题",
+          num: 8,
+        },
+      ],
+      raw: '原料',
+      ingredient: '配料',
+      subject: '主题',
+      appearance: '外观',
+      idea: '灵感',
+      like: '赞',
+
+
+      options: [
+        {
+          id: 1,
+          name: "净含量",
+          values: [
+            {
+              id: 1,
+              name: "500ml",
+            },
+            {
+              id: 2,
+              name: "600ml",
+            },
+          ],
+        },
+        {
+          id: 2,
+          name: "颜色",
+          values: [
+            {
+              id: 1,
+              name: "红色",
+            },
+            {
+              id: 2,
+              name: "绿色",
+            },
+          ],
+        },
+      ],
     },
     {
       id: 3,
       cover:
         "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2563999519,2928542426&fm=26&gp=0.jpg",
       title: "蛋糕4",
-      canSelfPickUp: true,
-      price: 669,
-      sales: 1589,
+            tags: [
+        {
+          id: 1,
+          name: "外观",
+          num: 3,
+        },
+        {
+          id: 2,
+          name: "原料",
+          num: 2,
+        },
+        {
+          id: 3,
+          name: "主题",
+          num: 8,
+        },
+      ],
+      raw: '原料',
+      ingredient: '配料',
+      subject: '主题',
+      appearance: '外观',
+      idea: '灵感',
+      like: '赞',
+
+
+      options: [
+        {
+          id: 1,
+          name: "净含量",
+          values: [
+            {
+              id: 1,
+              name: "500ml",
+            },
+            {
+              id: 2,
+              name: "600ml",
+            },
+          ],
+        },
+        {
+          id: 2,
+          name: "颜色",
+          values: [
+            {
+              id: 1,
+              name: "红色",
+            },
+            {
+              id: 2,
+              name: "绿色",
+            },
+          ],
+        },
+      ],
     },
     {
       id: 4,
       cover:
         "https://img01.yzcdn.cn/upload_files/2017/12/29/Fr5UOYsGAxzWQiWFipG3eoBUiHtC.jpg!large.webp",
       title: "蛋糕5",
-      canSelfPickUp: false,
-      price: 669,
-      sales: 1589,
+            tags: [
+        {
+          id: 1,
+          name: "外观",
+          num: 3,
+        },
+        {
+          id: 2,
+          name: "原料",
+          num: 2,
+        },
+        {
+          id: 3,
+          name: "主题",
+          num: 8,
+        },
+      ],
+      raw: '原料',
+      ingredient: '配料',
+      subject: '主题',
+      appearance: '外观',
+      idea: '灵感',
+      like: '赞',
+
+
+      options: [
+        {
+          id: 1,
+          name: "净含量",
+          values: [
+            {
+              id: 1,
+              name: "500ml",
+            },
+            {
+              id: 2,
+              name: "600ml",
+            },
+          ],
+        },
+        {
+          id: 2,
+          name: "颜色",
+          values: [
+            {
+              id: 1,
+              name: "红色",
+            },
+            {
+              id: 2,
+              name: "绿色",
+            },
+          ],
+        },
+      ],
     },
   ],
 };

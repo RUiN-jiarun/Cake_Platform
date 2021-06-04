@@ -36,5 +36,10 @@ export const getCommodity = ({ type = 1 }) => {
 
 export const getCommodityDetail = id => {
   // return request(`${URL_PREFIX}/commodity/${id}`);
-  return Promise.resolve(commodityDetail);
+  // return request(`pages/handbag/handbag/commodity/${id}`);
+  // return Promise.resolve(commodityDetail);
+  // console.log(Promise.resolve(allCommodity.data[id]));
+  // console.log(Promise.resolve(allCommodity));
+  // return allCommodity.data[id];
+  return Promise.resolve(allCommodity);
 };

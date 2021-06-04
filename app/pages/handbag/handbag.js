@@ -56,6 +56,7 @@ Page({
   getCommodityDetailPagePath(id) {
     return `/pages/commodity/commodity?id=${id}`;
   },
+  // 在这里修改！
   mapCommodityItemToViewList(commodities = []) {
     return commodities.map(item => ({
       ...item,

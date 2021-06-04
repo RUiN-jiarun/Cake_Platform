@@ -32,9 +32,9 @@ Component({
       getCommodityDetail(id)
         .then(({ data }) =>
           this.setData({
-            currentCommodity: data,
-            selectedTagId: this.getFirstId(data.Tag),
-            selectedOptionIds: data.options.map(item =>
+            currentCommodity: data[id],
+            selectedTagId: this.getFirstId(data[id].Tag),
+            selectedOptionIds: data[id].options.map(item =>
               this.getFirstId(item.values)
             ),
           })

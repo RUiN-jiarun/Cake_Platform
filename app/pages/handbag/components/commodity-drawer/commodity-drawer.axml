@@ -15,13 +15,13 @@
         mode="scaleToFill"
       />
       <view class="commodity-info__right">
-        <view class="commodity-info__name">{{currentCommodity.commodityName}}</view>
-        <view class="commodity-info__price-section">
+        <view class="commodity-info__name">{{currentCommodity.title}}</view>
+        <!-- <view class="commodity-info__price-section">
           <view class="commodity-info__price-icon">¥</view>
           <view class="commodity-info__price">{{currentCommodity.price}}</view>
         </view>
         <view class="commodity-info__storage">库存{{currentCommodity.storage}}件</view>
-        <view class="commodity-info__type">已选：{{currentCommodity.type}}</view>
+        <view class="commodity-info__type">已选：{{currentCommodity.type}}</view> -->
       </view>
     </view>
     <view class="commodity-tag">

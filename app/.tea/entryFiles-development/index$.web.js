@@ -28,5 +28,5 @@ require('../../pages/category/category?hash=132dec136945b3b0a66fc76febf44a6e21f0
 require('../../pages/search/search?hash=ef4fb84887010afe7b7bb71b7080a3b22dd7a410');
 require('../../pages/my-order/my-order?hash=5a278e5c01424b198c0835ce5ed5b2ad19c3def3');
 require('../../pages/my-vote/my-vote?hash=5a278e5c01424b198c0835ce5ed5b2ad19c3def3');
-require('../../pages/new-vote/new-vote?hash=32d7d2807ed4e666ef03b4b3fe8c38ecf2e34e68');
+require('../../pages/new-vote/new-vote?hash=3e2e5e2d473d03821badb5452a72c12422f436f6');
 require('../../pages/my-ticket/my-ticket?hash=5cbcbd88ecc7642955f3d3ee95e06e8eb58cac86');
