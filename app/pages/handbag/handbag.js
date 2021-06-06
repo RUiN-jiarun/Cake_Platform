@@ -1,4 +1,4 @@
-import { getCommodity } from '../../services/commodity';
+import { getCommodity, getLoveList } from '../../services/commodity';
 import * as log from '../../utils/log';
 import { ALL, TREND, LIKE} from '../../asserts/CommodityType';
 
@@ -56,7 +56,7 @@ Page({
   getCommodityDetailPagePath(id) {
     return `/pages/commodity/commodity?id=${id}`;
   },
-  // 在这里修改！
+  // 改
   mapCommodityItemToViewList(commodities = []) {
     return commodities.map(item => ({
       ...item,
@@ -75,12 +75,79 @@ Page({
         log.error('handbag.fetchCurrentCommodities.getAllCommodity', err)
       );
   },
+  // 这里要加上收藏的代码
   onConfirm() {
     // this.onCloseCommodityDrawer();
+    this.addToCollection(this.data.currentCommodities[this.data.selectedCommodityId], this.getToday());   // 这里要显示当前drawer里的信息
     my.showToast({
       type: 'success',
       content: '收藏成功',
       duration: 3000,
     });
+  },
+  onConfirmVote() {
+    // this.onCloseCommodityDrawer();
+    my.showToast({
+      type: 'success',
+      content: '投票成功',
+      duration: 3000,
+    });
+  },
+
+  // 格式化日期：yyyy.MM.dd
+  formatDate(date) {
+      var myyear = date.getFullYear();
+      var mymonth = date.getMonth() + 1;
+      var myweekday = date.getDate();
+  
+      // if (mymonth < 10) {
+      //     mymonth = "0" + mymonth;
+      // }
+      // if (myweekday < 10) {
+      //     myweekday = "0" + myweekday;
+      // }
+      return (myyear + "." + mymonth + "." + myweekday);
+  },
+
+  // 获取今天的日期
+  getToday() {
+    var date = new Date();
+    return this.formatDate(date);
+  },
+
+  // 加入收藏夹
+  addToCollection(item, date) {
+    console.log(item);
+    console.log(date);
+    // 6.5 确定可以搞到对应的信息了
+    getLoveList().then(function (data){
+      var info = data.data;
+      var changeInfo;
+      for (var i in info) {
+        if (i.time === date) {
+          changeInfo = i;
+        }
+      }
+      if (!changeInfo)
+        info.unshift({time: date, 
+          bakeIdeas: [{id: item.id,
+            title: item.title,
+            image: item.cover,
+            likeState: true,
+            tag: item.tags,
+            voteCount: 50,}]})
+      else 
+        changeInfo.bakeIdeas.push({
+          id: item.id,
+          title: item.title,
+          image: item.cover,
+          likeState: true,
+          tag: item.tags,
+          voteCount: 50,
+        })
+    })
+    getLoveList().then(function (data){
+      console.log(data);
+    })
   },
 });

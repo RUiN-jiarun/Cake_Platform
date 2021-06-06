@@ -14,6 +14,7 @@ Component({
     show: false,
     onClose: () => {},
     onConfirm: () => {},
+    onConfirmVote: () => {},
     commodityId: '',
   },
   didMount() {},
@@ -67,6 +68,10 @@ Component({
     onConfirm() {
       // TODO: add request
       this.props.onConfirm();
+    },
+    onConfirmVote() {
+      // TODO: add request
+      this.props.onConfirmVote();
     },
   },
 });

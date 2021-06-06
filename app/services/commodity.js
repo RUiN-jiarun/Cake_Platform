@@ -8,6 +8,7 @@ import {
   likeCommodity,
   votePage,
   commodityDetail,  // 商品详细信息
+  loveList,         // 收藏夹信息
 } from "./__mock__/commodity";
 import { ALL, TREND, NEW, LIKE, VOTE } from "../asserts/CommodityType";
 
@@ -42,4 +43,8 @@ export const getCommodityDetail = id => {
   // console.log(Promise.resolve(allCommodity));
   // return allCommodity.data[id];
   return Promise.resolve(allCommodity);
+};
+
+export const getLoveList = () => {
+  return Promise.resolve(loveList);
 };

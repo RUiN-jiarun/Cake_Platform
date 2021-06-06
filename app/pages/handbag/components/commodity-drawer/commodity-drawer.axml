@@ -179,7 +179,7 @@
       </view>
       <view
         class="commodity-confirm"
-        onTap="onConfirm"
+        onTap="onConfirmVote"
       >
         投票
       </view>
