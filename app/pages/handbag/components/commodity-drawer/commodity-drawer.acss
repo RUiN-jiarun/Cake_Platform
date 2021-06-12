@@ -194,3 +194,45 @@
   width: 15rpx;
   height: 23rpx;
 }
+
+/* 评论 */
+.comment-section{
+  /* 一条评论 */
+  width:340px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:20px;
+  margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 88% 12%;
+  grid-column-gap: 10rpx;
+}
+
+.comment-section_right{
+  /* icon */
+  text-align: right;
+  margin-right:20px;
+  margin-top:10px;
+  padding-top: 0 px;
+}
+
+.comment-section_right-red{
+  /* icon */
+  text-align: right;
+  margin-right:20px;
+  margin-top:10px;
+  padding-top: 0 px;
+  color: red;
+}
+
+.talk-section{
+  /* 评论内容 */
+  word-break: normal;
+  width:330px;
+  margin-left: 4px;
+  margin-right:4px;
+  margin-top:10px;
+  text-align: justify;
+  font-size: 15px;
+  line-height: 20px;
+}

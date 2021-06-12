@@ -94,3 +94,16 @@ button {
   background-color: #ddd;
   margin-left: 30rpx;
 }
+
+/* 确定按钮————改编成收藏按钮或投票按钮 */
+.commodity-confirm {
+  background-image: linear-gradient(90deg, #ff9000 0%, #ff5000 100%);
+  border-radius: 100000rpx;
+  font-size: 35rpx;
+  padding: 20rpx;
+  color: #fff;
+  margin: 10rpx 24rpx 40rpx;
+  text-align: center;
+  width: fit-content;
+  display: inline-block;
+}

@@ -2,15 +2,14 @@
 import { request } from "../utils/request";
 import {
   searchTrend,
-  allCommodity,     // 所有商品
-  trendCommodity,   // 商品人气榜
-  newCommodity,     // 新品（这里考虑删掉不要，在所有商品里加上按时间排序）
+  picCommodity,     // 瀑布流界面
+  allCommodity,     // 商品人气榜
   likeCommodity,
-  votePage,
-  commodityDetail,  // 商品详细信息
+
   loveList,         // 收藏夹信息
+  myList,           // 我的发起的创意信息
 } from "./__mock__/commodity";
-import { ALL, TREND, NEW, LIKE, VOTE } from "../asserts/CommodityType";
+import { ALL, TREND, LIKE } from "../asserts/CommodityType";
 
 export const getSearchTrend = () => {
   // return request(`${URL_PREFIX}/trend`);
@@ -21,15 +20,12 @@ export const getCommodity = ({ type = 1 }) => {
   // return request(`${URL_PREFIX}/commodity?type=${type}`);
   switch (type) {
     case ALL:
-      return Promise.resolve(allCommodity);
+      return Promise.resolve(picCommodity);
     case TREND:
-      return Promise.resolve(trendCommodity);
-    case NEW:
-      return Promise.resolve(newCommodity);
+      return Promise.resolve(allCommodity);
     case LIKE:
       return Promise.resolve(likeCommodity);
-    case VOTE:
-      return Promise.resolve(votePage);
+
     default:
       return Promise.resolve([]);
   }
@@ -47,4 +43,8 @@ export const getCommodityDetail = id => {
 
 export const getLoveList = () => {
   return Promise.resolve(loveList);
+};
+
+export const getMyList = () => {
+  return Promise.resolve(myList);
 };

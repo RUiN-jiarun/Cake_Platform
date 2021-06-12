@@ -11,50 +11,6 @@ Page({
     // 根据id对应allCommodity里的item
     // TODO: 如何动态创建
     lovelist: [],
-    // loveList: [
-    //   {
-    //     time: '2021.6.1',
-    //     bakeIdeas: [
-    //       {
-    //         title: '柠檬卷',
-    //         image: 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*DenfRpLr6NEAAAAAAAAAAABkARQnAQ',
-    //         tag: ['外观创意', '主题创意'],
-    //         voteCount: 129,
-    //         likeState: true,
-    //         id: 0,
-    //       },
-    //       {
-    //         title: '流心挞',
-    //         image: 'https://5b0988e595225.cdn.sohucs.com/images/20170925/5756a82b35d34439b7f0ca878744167d.jpeg',
-    //         tag: ['原料创意'],
-    //         voteCount: 333,
-    //         likeState: true,
-    //         id: 1,
-    //       },
-    //     ],
-    //   },
-    //   {
-    //     time: '2021.5.29',
-    //     bakeIdeas: [
-    //       {
-    //         title: '柠檬卷',
-    //         image: 'https://5b0988e595225.cdn.sohucs.com/images/20170925/1f6d21de438245fdbad9e0843012c003.jpeg',
-    //         tag: ['外观创意', '主题创意', '原料创意'],
-    //         voteCount: 555,
-    //         likeState: true,
-    //         id: 2,
-    //       },
-    //       {
-    //         title: '流心挞',
-    //         image: 'https://5b0988e595225.cdn.sohucs.com/images/20170925/1f6d21de438245fdbad9e0843012c003.jpeg',
-    //         tag: ['外观创意', '主题创意'],
-    //         voteCount: 888,
-    //         likeState: true,
-    //         id: 1,
-    //       },
-    //     ],
-    //   },
-    // ],
   },
   onLoad() {
     getLoveList().then(({ data }) =>
@@ -90,7 +46,4 @@ Page({
   getCommodityDetailPagePath(id) {
     return `/pages/commodity/commodity?id=${id}`;
   },
-
-
- 
 });

@@ -5,7 +5,7 @@
   onClose="onClose"
 >
   <view
-    a:if="{{currentCommodity.options}}"
+    
     class="commodity"
   >
     <view class="commodity-info">
@@ -99,7 +99,7 @@
             mode="scaleToFill"
           />
           <view class="commodity-detail__body-detail">
-            {{currentCommodity.ingredient}}
+            {{currentCommodity.subject}}
           </view>
         </view>
       </view>
@@ -122,7 +122,7 @@
             mode="scaleToFill"
           />
           <view class="commodity-detail__body-detail">
-            {{currentCommodity.ingredient}}
+            {{currentCommodity.appearance}}
           </view>
         </view>
       </view>
@@ -130,6 +130,18 @@
 
     <view class="commodity-divider"></view>
 
+    <view>
+      <view a:for="{{currentCommodity.comments}}" a:for-item="eachComment" class="comment-section">
+        <avatar src="{{eachComment.useravatar}}" size="sm" name="{{eachComment.name}}" desc="{{eachComment.time}}" />
+        <view class=" {{eachComment.likeState?'comment-section_right-red':'comment-section_right'}}" data-attr="{{eachComment.id}}" onTap="onLikeComments">
+          <am-icon type="good" size="25"/>
+        </view>
+        <view class="talk-section">
+          <text>{{eachComment.description}}</text>
+        </view>
+  
+      </view>
+    </view>
 
     <view class="commodity-divider"></view>
 

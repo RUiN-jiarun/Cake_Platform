@@ -8,6 +8,7 @@ Page({
     TREND,
     LIKE,
     searchValue: '',
+    search: '',
     tabs: [
       {
         id: ALL,
@@ -30,11 +31,21 @@ Page({
     showCommodityDrawer: false,
     showPicDetail: false,
   },
+
   onShow() {
     const { searchValue = '' } = getApp();
+
+    // console.log(this.search);
+
     this.setData({ searchValue });
-    this.fetchCurrentCommodities(this.data.activeTabId);
+    // console.log(this.data.searchValue);
+    // 是这里！！！！是这里每次要更改搜索结果！！！
+    this.fetchCurrentCommodities(this.data.activeTabId, this.data.searchValue);
   },
+
+
+
+
   onActiveTabChange(id) {
     this.setData({ activeTabId: id });
     this.fetchCurrentCommodities(id);
@@ -43,7 +54,7 @@ Page({
     this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
   },
   onTapPic(id) {
-    console.log("点击了图片详情");
+    // console.log("点击了图片详情");
     this.setData({ selectedCommodityId: id, showPicDetail: true });
   },
   onCloseCommodityDrawer() {
@@ -63,17 +74,45 @@ Page({
       url: this.getCommodityDetailPagePath(item.id),
     }));
   },
-  fetchCurrentCommodities(commodityType) {
+  fetchCurrentCommodities(commodityType, searchValue) {
     this.setData({ currentCommodities: [] });
-    getCommodity({ type: commodityType })
-      .then(({ data = [] }) =>
-        this.setData({
-          currentCommodities: this.mapCommodityItemToViewList(data),
-        })
-      )
+    console.log(commodityType);
+    if (commodityType < 3) {
+       getCommodity({ type: commodityType })
+      .then(({ data = [] }) => {
+        console.log(searchValue);
+        // console.log(data);
+        var searchData = [];
+        for (var item of data) {
+          // console.log(item);
+          if (item.title.indexOf(searchValue) != -1) {
+            searchData.push(item);
+          }
+        }
+        if (typeof(searchValue)=="undefined") {
+          this.setData({
+            currentCommodities: this.mapCommodityItemToViewList(data),
+            // currentCommodities: this.mapCommodityItemToViewList(searchData),
+          })
+        }
+        else {
+          this.setData({
+            // currentCommodities: this.mapCommodityItemToViewList(data),
+            currentCommodities: this.mapCommodityItemToViewList(searchData),
+          })
+        }
+        
+      })
       .catch(err =>
         log.error('handbag.fetchCurrentCommodities.getAllCommodity', err)
       );
+    }
+    else {
+      getCommodity({ type: 1 }).then(({data = []}) => {
+        
+      })
+    }
+   
   },
   // 这里要加上收藏的代码
   onConfirm() {
@@ -135,7 +174,7 @@ Page({
             image: item.cover,
             likeState: true,
             tag: item.tags,
-            voteCount: 50,}]})
+            voteCount: item.voteCount,}]})
       else 
         changeInfo.bakeIdeas.push({
           id: item.id,
@@ -143,7 +182,7 @@ Page({
           image: item.cover,
           likeState: true,
           tag: item.tags,
-          voteCount: 50,
+          voteCount: item.voteCount,
         })
     })
     getLoveList().then(function (data){

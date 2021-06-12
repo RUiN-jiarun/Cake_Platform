@@ -1,53 +1,36 @@
-// 此处未来是收藏栏的内容
-import { getCommodity } from '../../services/commodity';
+// 此处未来是查看自己发起的投票的内容
+import { getMyList } from '../../services/commodity';
 import * as log from '../../utils/log';
 import { ALL, TREND, LIKE } from '../../asserts/CommodityType';
+import { loveList } from '/services/__mock__/commodity';
 Page({
   data: {
     selectedCommodityId: '',
     showCommodityDrawer: false,
-    myVoteList: [
-      {
-        title: '柠檬卷',
-        time:'2021-06-02',
-        image: 'https://5b0988e595225.cdn.sohucs.com/images/20170925/5756a82b35d34439b7f0ca878744167d.jpeg',
-        tag: ['外观创意', '主题创意'],
-        voteCount: 129,
-        likeState: true,
-        id: 1,
-      },
-      {
-        title: '柠檬卷',
-        time:'2021-06-02',
-        image: 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*DenfRpLr6NEAAAAAAAAAAABkARQnAQ',
-        tag: ['外观创意'],
-        voteCount: 89,
-        likeState: true,
-        id: 4,
-      },
-      {
-        title: '柠檬卷',
-        time:'2021-06-02',
-        image: 'https://5b0988e595225.cdn.sohucs.com/images/20170925/5756a82b35d34439b7f0ca878744167d.jpeg',
-        tag: ['外观创意', '主题创意'],
-        voteCount: 223,
-        likeState: true,
-        id: 5,
-      },
-    ],
+    // 这里要修改！
+    // 根据id对应allCommodity里的item
+    // TODO: 如何动态创建
+    mylist: [],
   },
-  onLoad() { },
+  onLoad() {
+    getMyList().then(({ data }) =>
+          this.setData({
+              mylist: data
+          })
+        );
+  },
+  // 点击···显示详情
   onClickMe(e) {
     // my.navigateTo({
     //   url: '/pages/commodity/commodity?id=${id}',
     // })
-    var attr = e.currentTarget.dataset.attr;
+    var attr=e.currentTarget.dataset.attr;
     console.log(attr);
     this.setData({ selectedCommodityId: attr, showCommodityDrawer: true });
   },
-  onTapCommodity(id) {
-    this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
-  },
+  // onTapCommodity(id) {
+  //   this.setData({ selectedCommodityId: id, showCommodityDrawer: true });
+  // },
   onCloseCommodityDrawer() {
     this.setData({ showCommodityDrawer: false });
   },
@@ -62,4 +45,7 @@ Page({
   getCommodityDetailPagePath(id) {
     return `/pages/commodity/commodity?id=${id}`;
   },
+
+
+ 
 });

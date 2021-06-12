@@ -1,0 +1,32 @@
+<view>
+  New Component
+    <!-- <movable-area>
+      <movable-view 
+        x="{{x}}" 
+        y="{{y}}" 
+        direction="all"
+        onTouchStart="onTouchStart"
+        onTouchMove="onTouchMove"
+        onTouchCancel="onTouchCancel">movable-view</movable-view>
+    </movable-area> -->
+    <movable-area className="stroll-shop">
+      <movable-view
+        
+        onTouchCancel="onCancel"
+        onTouchEnd="onCancel"
+        onTouchStart="onTouchStart"
+        onTouchMove="onTouchMove"
+        x={{x[index]}}
+        y={{y[index]}} 
+        direction="all"
+        out-of-bounds=true
+        className="shop-imgbox"
+      >
+      <view className='images-box'
+            style = "transform:rotate({{tiltAngle[index]}}deg)" >
+        <image src={{list[index]}} className='images'></image>
+      </view>
+      
+      </movable-view>
+    </movable-area>
+</view>

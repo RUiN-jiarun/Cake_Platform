@@ -13,14 +13,17 @@
 
   <!--<location /> -->
   <view class="search-nav">
-    <navigator className="search-nav__input" url="/pages/search/search">
-      <search value="{{searchValue}}" disabled="{{true}}" />
+    <navigator open-type="navigate" className="search-nav__input" url="/pages/search/search">
+    <!-- <navigator open-type="redirect" className="search-nav__input" url="/pages/search/search"> -->
+      <search value="{{searchValue}}" disabled="{{true}}"  />
+      <!-- <search value="{{searchValue}}" disabled="{{true}}" /> -->
     </navigator>
     <category-nav />
   </view>
   <tab activeId="{{activeTabId}}" onActiveTabChange="onActiveTabChange" tabs="{{tabs}}" />
   <!-- 如果是TREND则采用单column有排序的格式呈商品 -->
-  <masonry a:if="{{currentCommodities.length>0}}" columns="{{activeTabId===TREND?1:2}}" isRanking="{{activeTabId===TREND}}" masonryData="{{currentCommodities}}" onTapCommodity="{{activeTabId===ALL?'onTapPic':'onTapCommodity'}}" />
+  <masonry a:if="{{activeTabId != LIKE && currentCommodities.length>0}}" columns="{{activeTabId===TREND?1:2}}" masonryData="{{currentCommodities}}" onTapCommodity="{{activeTabId===ALL?'onTapPic':'onTapCommodity'}}" />
+  <card a:elif="{{activeTabId === LIKE}}" />
   <empty
     a:else type="{{searchValue?EmptyType.EMPTY_SEARCH_RESULT:EmptyType.EMPTY_STORE}}" className="empty-position" />
 </view>

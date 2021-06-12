@@ -3,6 +3,8 @@
   "usingComponents": {
     "drawer": "/components/Drawer/Drawer",
     "select-button": "/components/select-button/select-button",
-    "purchase-number": "/components/purchase-number/purchase-number"
+    "purchase-number": "/components/purchase-number/purchase-number",
+    "avatar": "mini-ali-ui/es/avatar/index",
+    "am-icon": "mini-ali-ui/es/am-icon/index"
   }
 }

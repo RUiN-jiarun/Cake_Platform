@@ -1,51 +1,54 @@
 <view class="page">
-  
-  
-
+  <form onSubmit="onSubmit">
+  <view class="page-section">
+    <view class="form-row">
+      <view class="form-row-content">
+        <input name="name" class="input" id="controlled" onInput="bindKeyInput" placeholder="创意名称" />
+      </view>
+    </view>
+  </view>
 
   <view class="page-section">
     <view class="form-row">
       <view class="form-row-content">
-        <input class="input" id="controlled" onInput="bindKeyInput" placeholder="创意名称" />
-      </view>
-    </view>
-  </view>
-  <view class="page-section">
-    <view class="form-row">
-      <view class="form-row-content">
-        <input class="input" id="controlled" onInput="bindKeyInput" placeholder="创意类别" />
+        <checkbox-group name="tags">
+          <label><checkbox value="原料" />原料</label> 
+          <label><checkbox value="主题" />主题</label>
+          <label><checkbox value="外观" />外观</label>
+          <label><checkbox value="灵感" />灵感</label>
+        </checkbox-group>
       </view>
     </view>
   </view>
   
 
   <view class="page-section">
-    <form onSubmit="bindFormSubmit">
+    
       <view class="page-section-demo">
-        <textarea name="textarea"placeholder="原料说明"  />
+        <textarea name="gradient" placeholder="原料说明"  />
       </view>
-    </form>
+ 
   </view>
   <view class="page-section">
-    <form onSubmit="bindFormSubmit">
+
       <view class="page-section-demo">
-        <textarea name="textarea"placeholder="主题说明"  />
+        <textarea name="subject" placeholder="主题说明"  />
       </view>
-    </form>
+
   </view>
   <view class="page-section">
-    <form onSubmit="bindFormSubmit">
+
       <view class="page-section-demo">
-        <textarea name="textarea"placeholder="外观说明"  />
+        <textarea name="appearance" placeholder="外观说明"  />
       </view>
-    </form>
+
   </view>
   <view class="page-section">
-    <form onSubmit="bindFormSubmit">
+
       <view class="page-section-demo">
-        <textarea name="textarea"placeholder="灵感说明"  />
+        <textarea name="idea" placeholder="灵感说明"  />
       </view>
-    </form>
+
   </view>
 
 
@@ -56,5 +59,15 @@
   <view class="page-section-btns">
       <button form-type="submit" size="mini" type="primary">发起创意</button>
   </view>  
- 
+  
+  <!-- <view style="text-align:center"> 
+    <view
+      class="commodity-confirm"
+      onTap="onConfirm"
+    >     
+       发起创意 
+       <button style="display:none;" form-type="submit"></button>
+    </view>
+  </view> -->
+</form>
 </view>

@@ -1,0 +1,145 @@
+.stroll-tab {
+  width: 100%;
+  min-height: 100vh;
+  background: #F6F6F6;
+}
+.stroll-text {
+  width: 100%;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-tip1 {
+  font-size: 28px;
+  color: #333333;
+}
+.text-tip2 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.t1 {
+  font-size: 28px;
+  color: #333333;
+}
+.icon-image {
+  width:20px;
+  height:20px;
+}
+
+
+/* movable-area {
+  align-items: center;
+  height: 650rpx;
+  width: 680rpx;
+  margin: 0rpx 0rpx 0 0rpx;
+  background-color: #ccc; 
+  overflow: hidden;
+} */
+
+.stroll-shop {
+  width: 100%;
+  height: 350px;
+  margin-top: 40px;
+}
+.shop-imgbox {
+  display: flex;
+  align-items: center;
+  width: 700rpx;
+  height: 600rpx;
+  border-radius: 24rpx;
+}
+.images-box {
+  width: 660rpx;
+  height: 100%;
+  border-radius: 24rpx;
+  box-shadow: 0rpx 2rpx 5rpx 0rpx rgba(0,0,0,0.1);
+  background-color: #fff;
+  position: relative;
+}
+.images {
+  width: 480rpx;
+  height: 480rpx;
+  position: absolute;
+  left: 40rpx;
+  top: 20rpx;
+}
+.imagelike {
+  width: 96px;
+  height: 48px;
+  position: absolute;
+  right: 40px;
+  top: 20px;
+}
+.imageunlike {
+  width: 148px;
+  height: 48px;
+  position: absolute;
+  left: 40px;
+  top: 20px;
+}
+
+.shop-imgbox:nth-child(1) {
+  width: 486px;
+  z-index: 50;
+}
+.shop-imgbox:nth-child(2) {
+  width: 476px;
+  z-index: 40;
+  margin: 15px 0px 0px 5px;
+}
+.shop-imgbox:nth-child(3) {
+  width: 466px;
+  z-index: 30;
+  margin: 30px 0px 0px 10px;
+}
+.shop-imgbox:nth-child(4) {
+  width: 456px;
+  z-index: 20;
+  margin: 0px 0px 0px 15px;
+}
+.shop-imgbox:nth-child(5) {
+  width: 446px;
+  z-index: 10;
+  margin: 0px 0px 0px 20px;
+}
+
+.noshop-card {
+  width: 100%;
+  margin-top: 40px;
+  padding: 0px 16px;
+}
+.noshop-image {
+  width: 100%;
+  height: 806px;
+}
+
+.stroll-fotter {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+.fot-twoimg {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.dislike-image {
+  width: 120px;
+  height: 120px;
+}
+.like-image {
+  width: 120px;
+  height: 120px;
+  margin-left: 48px;
+}
+
+.fot-text {
+  color: #368BE5;
+  font-size: 28px;
+  margin-top: 40px;
+  margin-bottom: 50px;
+}

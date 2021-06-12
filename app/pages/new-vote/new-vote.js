@@ -1,8 +1,11 @@
+import { allCommodity } from '../../services/__mock__/commodity';
+
 Page({
 
   data: {
-    height: 20,
+    allCommodity,
     focus: false,
+    compressedSrc: '',
   },
   bindButtonTap() {
     this.onFocus();
@@ -42,6 +45,44 @@ Page({
           }
         })
       }
+    })
+  },
+
+  // onConfirm(e) {
+  //   // this.onCloseCommodityDrawer();
+  //   console.log(e);
+  //   my.showToast({
+  //     type: 'success',
+  //     content: '已发起',
+  //     duration: 3000,
+  //   });
+  // },
+
+  onSubmit(e) {
+    // console.log(`${JSON.stringify(e.detail.value)}`);
+    console.log(e.detail.value);
+    console.log(this.data.compressedSrc);
+    // my.alert({
+    //   content: `数据：${JSON.stringify(e.detail.value)}`,
+    // });
+    my.showToast({
+      type: 'success',
+      content: '已发起',
+      duration: 3000,
+    });
+    this.addToAll(e.detail.value, this.data.compressedSrc);
+    my.switchTab({ url: '/pages/handbag/handbag' });
+  },
+
+  addToAll(item, pic) {
+    console.log(allCommodity);
+    var num = allCommodity.data.length;
+    console.log(item.name);
+    allCommodity.data.push({
+      id: num,
+      title: item.name,
+      cover: pic,
+
     })
   },
 

@@ -35,9 +35,9 @@ Component({
           this.setData({
             currentCommodity: data[id],
             selectedTagId: this.getFirstId(data[id].Tag),
-            selectedOptionIds: data[id].options.map(item =>
-              this.getFirstId(item.values)
-            ),
+            // selectedOptionIds: data[id].options.map(item =>
+            //   this.getFirstId(item.values)
+            // ),
           })
         )
         .catch(err =>

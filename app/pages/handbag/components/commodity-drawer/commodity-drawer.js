@@ -7,8 +7,7 @@ Component({
     selectedTagId: '',
     selectedOptionIds: [],
     currentCommodity: {},
-    purchaseNumber: 1,
-    address: '杭州市 余杭区  闲林街道  翡翠城东北区',
+    // commentsLike: [],
   },
   props: {
     show: false,
@@ -19,7 +18,9 @@ Component({
   },
   didMount() {},
   didUpdate(preProps) {
+    console.log('更新');
     const { commodityId } = this.props;
+    // this.fetchCommodityDetailById(commodityId);
     if (preProps.commodityId !== commodityId) {
       this.fetchCommodityDetailById(commodityId);
     }
@@ -30,15 +31,17 @@ Component({
       this.props.onClose();
     },
     fetchCommodityDetailById(id) {
+      console.log(id);
       getCommodityDetail(id)
-        .then(({ data }) =>
+        .then(({ data }) => {
+          console.log(data);
           this.setData({
             currentCommodity: data[id],
             selectedTagId: this.getFirstId(data[id].Tag),
-            selectedOptionIds: data[id].options.map(item =>
-              this.getFirstId(item.values)
-            ),
-          })
+            // selectedOptionIds: data[id].options.map(item =>
+            //   this.getFirstId(item.values)
+            // ),
+          })}
         )
         .catch(err =>
           log.error(
@@ -68,10 +71,25 @@ Component({
     onConfirm() {
       // TODO: add request
       this.props.onConfirm();
+      this.onClose();
     },
     onConfirmVote() {
       // TODO: add request
       this.props.onConfirmVote();
+      this.onClose();
+    },
+    onLikeComments(e) {
+      var attr = e.currentTarget.dataset.attr;
+      var state = this.data.currentCommodity.comments[attr].likeState;
+      this.data.currentCommodity.comments[attr].likeState = !state;
+      my.showToast({
+        type: 'success',
+        content: '点赞成功',
+        duration: 3000,
+      });
+      console.log(this.data.currentCommodity.comments[attr].likeState);
+      // this.props.onLikeComments(attr);
+      this.onClose();
     },
   },
 });

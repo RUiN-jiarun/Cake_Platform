@@ -6,7 +6,7 @@
 />
 <view disable-scroll="{{showCommodityDrawer}}">
   <title className="title">我的创意</title>
-  <view a:for="{{myVoteList}}" a:for-item="eachIdea" class="idea-section">
+  <view a:for="{{mylist}}" a:for-item="eachIdea" class="idea-section">
     <view class="idea-section-body">
       <image class="idea-section-body__image" lazy-load="{{true}}" src="{{eachIdea.image}}" mode="scaleToFill" />
       <view class="idea-section-body__middle">
@@ -14,7 +14,7 @@
           {{eachIdea.title}}
         </view>
         <view class="idea-section-body__tag" a:for="{{eachIdea.tag}}" a:for-item="eachTag">
-          {{eachTag}}
+          {{eachTag.name}}
         </view>
         <view class="idea-section-body__time">
           {{eachIdea.time}}
