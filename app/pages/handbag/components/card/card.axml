@@ -1,5 +1,4 @@
 <view>
-  New Component
     <!-- <movable-area>
       <movable-view 
         x="{{x}}" 
@@ -14,7 +13,7 @@
         a:for="{{list}}"
         a:for-index="index"
         a:for-item="item"
-        key={{item.id}}
+        id={{item.id}}
         onTouchCancel="onCancel"
         onTouchEnd="onCancel"
         onTouchStart="onTouchStart"
