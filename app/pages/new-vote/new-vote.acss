@@ -18,6 +18,7 @@ page {
 .page-section {
   background: #fff;
   margin-bottom: 32rpx;
+  font-size: 32rpx;
 }
 
 .page-section-title {

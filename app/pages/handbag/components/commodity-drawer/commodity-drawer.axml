@@ -49,7 +49,7 @@
         <view class="commodity-detail__body-left">
           <image
             class="commodity-detail__body-location"
-            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            src="../../../../icons/地址.png"
             mode="scaleToFill"
           />
           <view class="commodity-detail__body-detail">
@@ -72,7 +72,7 @@
         <view class="commodity-detail__body-left">
           <image
             class="commodity-detail__body-location"
-            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            src="../../../../icons/地址.png"
             mode="scaleToFill"
           />
           <view class="commodity-detail__body-detail">
@@ -95,7 +95,7 @@
         <view class="commodity-detail__body-left">
           <image
             class="commodity-detail__body-location"
-            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            src="../../../../icons/地址.png"
             mode="scaleToFill"
           />
           <view class="commodity-detail__body-detail">
@@ -118,7 +118,7 @@
         <view class="commodity-detail__body-left">
           <image
             class="commodity-detail__body-location"
-            src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*1U19Rbxzg8MAAAAAAAAAAABkARQnAQ"
+            src="../../../../icons/地址.png"
             mode="scaleToFill"
           />
           <view class="commodity-detail__body-detail">

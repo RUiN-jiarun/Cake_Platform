@@ -10,7 +10,7 @@
       </view>
       <image
         class="category-header__nav"
-        src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*yeGUSJlo0gsAAAAAAAAAAABkARQnAQ"
+        src="../../icons/分类.png"
         mode="scaleToFill"
       />
     </view>

@@ -41,7 +41,7 @@ Page({
       {
         name: '我的收藏',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*Y8BATYqMN78AAAAAAAAAAABkARQnAQ',
+          '../../icons/收藏.png',
         onClick: () =>
           my.navigateTo({
             url: '/pages/my-order/my-order',
@@ -50,7 +50,7 @@ Page({
       {
         name: '我的创意',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9RqXQaxLeCEAAAAAAAAAAABkARQnAQ',
+          '../../icons/创意.png',
         onClick: () => 
           my.navigateTo({
             // 未来这里是跳转到一个查看自己发起的投票的页面
@@ -60,7 +60,7 @@ Page({
       {
         name: '我的奖券',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9RqXQaxLeCEAAAAAAAAAAABkARQnAQ',
+          '../../icons/优惠券.png',
         onClick: () =>
           my.navigateTo({
             url: '/pages/my-ticket/my-ticket',
@@ -69,7 +69,7 @@ Page({
       {
         name: '关于',
         thumb:
-          'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*-Lp1TZDggnoAAAAAAAAAAABkARQnAQ',
+          '../../icons/关于.png',
         onClick: () => {},
       },
     ],

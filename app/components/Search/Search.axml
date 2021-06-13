@@ -4,7 +4,7 @@
 >
   <image
     class="search__icon"
-    src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*-ZudTL5rua4AAAAAAAAAAABkARQnAQ"
+    src="../../icons/搜索.png"
     mode="scaleToFill"
   />
 
@@ -27,7 +27,7 @@
   >
     <image
       class="search__clear"
-      src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*xttPT7EFYEAAAAAAAAAAAABkARQnAQ"
+      src="../../icons/搜索.png"
       mode="scaleToFill"
     />
   </view>

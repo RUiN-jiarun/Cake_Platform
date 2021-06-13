@@ -21,20 +21,20 @@
     "items": [
       {
         "pagePath": "pages/handbag/handbag",
-        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
-        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
+        "icon": "icons/商品页面.png",
+        "activeIcon": "icons/商品页面1.png",
         "name": "新品界面"
       },
       {
         "pagePath": "pages/new-vote/new-vote",
-        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*WLzeR4T4_oMAAAAAAAAAAABkARQnAQ",
-        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*IRA7QYpBww4AAAAAAAAAAABkARQnAQ",
+        "icon": "icons/发起创意.png",
+        "activeIcon": "icons/发起创意1.png",
         "name": "发起创意"
       },
       {
         "pagePath": "pages/my/my",
-        "icon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*n1f8SYBo_RkAAAAAAAAAAABkARQnAQ",
-        "activeIcon": "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*q2eOQpQEzDsAAAAAAAAAAABkARQnAQ",
+        "icon": "icons/个人中心.png",
+        "activeIcon": "icons/个人中心1.png",
         "name": "个人中心"
       }
     ]

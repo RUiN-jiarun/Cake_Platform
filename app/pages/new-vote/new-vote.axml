@@ -2,8 +2,9 @@
   <form onSubmit="onSubmit">
   <view class="page-section">
     <view class="form-row">
+    <view class="form-row-label">创意名称</view>
       <view class="form-row-content">
-        <input name="name" class="input" id="controlled" onInput="bindKeyInput" placeholder="创意名称" />
+        <input name="name" class="input" id="controlled" onInput="bindKeyInput" placeholder="" />
       </view>
     </view>
   </view>
@@ -21,36 +22,33 @@
     </view>
   </view>
   
-
   <view class="page-section">
-    
+    <view class="page-section-title">原料说明</view>
       <view class="page-section-demo">
-        <textarea name="gradient" placeholder="原料说明"  />
+        <textarea name="gradient" placeholder=""  />
       </view>
- 
-  </view>
-  <view class="page-section">
-
-      <view class="page-section-demo">
-        <textarea name="subject" placeholder="主题说明"  />
-      </view>
-
-  </view>
-  <view class="page-section">
-
-      <view class="page-section-demo">
-        <textarea name="appearance" placeholder="外观说明"  />
-      </view>
-
-  </view>
-  <view class="page-section">
-
-      <view class="page-section-demo">
-        <textarea name="idea" placeholder="灵感说明"  />
-      </view>
-
   </view>
 
+  <view class="page-section">
+    <view class="page-section-title">主题说明</view>
+      <view class="page-section-demo">
+        <textarea name="subject" placeholder=""  />
+      </view>
+  </view>
+  
+  <view class="page-section">
+    <view class="page-section-title">外观说明</view>
+      <view class="page-section-demo">
+        <textarea name="appearance" placeholder=""  />
+      </view>
+  </view>
+  
+  <view class="page-section">
+    <view class="page-section-title">灵感说明</view>
+      <view class="page-section-demo">
+        <textarea name="idea" placeholder=""  />
+      </view>
+  </view>
 
   <view class="page-section-demo">
       <button type="default" onTap="selectImage" hover-class="defaultTap">选择图片</button>
