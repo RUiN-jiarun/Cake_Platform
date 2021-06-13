@@ -11,7 +11,10 @@
     </movable-area> -->
     <movable-area className="stroll-shop">
       <movable-view
-        
+        a:for="{{list}}"
+        a:for-index="index"
+        a:for-item="item"
+        key={{item.id}}
         onTouchCancel="onCancel"
         onTouchEnd="onCancel"
         onTouchStart="onTouchStart"
@@ -24,7 +27,7 @@
       >
       <view className='images-box'
             style = "transform:rotate({{tiltAngle[index]}}deg)" >
-        <image src={{list[index]}} className='images'></image>
+        <image src={{item.img}} className='images'></image>
       </view>
       
       </movable-view>
