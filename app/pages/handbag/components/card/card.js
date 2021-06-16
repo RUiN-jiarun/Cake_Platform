@@ -1,3 +1,6 @@
+import { getCommodity } from '../../../../services/commodity';
+import { LIKE } from '/asserts/CommodityType';
+
 Component({
   mixins: [],
   data: {
@@ -10,93 +13,140 @@ Component({
     y: ['16','16','16','16','16','16','16','16','16','16'],
     like: [false,false,false,false,false,false,false,false,false,false],
     unlike: [false,false,false,false,false,false,false,false,false,false],
-    list: [{ 
-        id: 0,
-        img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-      }, 
-      { 
-        id: 1,
-      img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-      }, 
-      { 
-        id:2,
-      img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-      }, 
-      { 
-        id:3,
-      img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-      }, 
-      { 
-        id:4,
-      img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-      }, 
-      {
-        id:5,
-        img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-      }, 
-      { 
-        id:6,
-      img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-      }, 
-      { 
-        id:7,
-      img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-      }, 
-      { 
-        id:8,
-      img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-      }, 
-      { 
-        id:9,
-      img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-      }, ],
+    list: [],
+    listCopy: [],
+    // list: [{ 
+    //     id: 0,
+    //     img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
+    //     name: '芜~',
+    //     shop: '店铺a',
+    //     tag:[{
+    //       id: 1,
+    //       name: '外观新颖',
+    //       num: 3,
+    //     },
+    //     {
+    //       id: 2,
+    //       name: '口味独特',
+    //       num: 3,
+    //     }]
+    //   }, 
+    //   { 
+    //     id: 1,
+    //     img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
+    //     name: '芜~',
+    //     shop: '店铺a',
+    //   }, 
+    //   { 
+    //     id:2,
+    //     img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
+    //     name: '芜~',
+    //     shop: '店铺a',
+    //   }, 
+    //   { 
+    //     id:3,
+    //     img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
+    //     name: '芜~',
+    //     shop: '店铺po',
+    //   }, 
+    //   { 
+    //     id:4,
+    //     img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
+    //     name: '芜~',
+    //     shop: '店铺a',
+    //   }, 
+    //   {
+    //     id:5,
+    //     img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
+    //     name: '芜~',
+    //     shop: '店铺xy',
+    //   }, 
+    //   { 
+    //     id:6,
+    //     img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
+    //     name: '芜~',
+    //     shop: '店铺v',
+    //   }, 
+    //   { 
+    //     id:7,
+    //     img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
+    //     name: 'hahahaha~',
+    //     shop: '店铺a',
+    //   }, 
+    //   { 
+    //     id:8,
+    //     img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
+    //     name: 'Test2~',
+    //     shop: '店铺b',
+    //   }, 
+    //   { 
+    //     id:9,
+    //     img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
+    //     name: 'Test1',
+    //     shop: '店铺a',
+    //     tag:[{
+    //       id: 1,
+    //       name: '外观新颖',
+    //       num: 3,
+    //     },
+    //     {
+    //       id: 2,
+    //       name: '口味独特',
+    //       num: 3,
+    //     }],
+    //     description: '隔壁小孩都馋哭了',
+    //   },],
       
-      // 要存一份copy用于记录
-      listCopy: [{ 
-        id: 0,
-        img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-      }, 
-      { 
-        id: 1,
-      img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-      }, 
-      { 
-        id:2,
-      img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-      }, 
-      { 
-        id:3,
-      img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-      }, 
-      { 
-        id:4,
-      img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-      }, 
-      {
-        id:5,
-        img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-      }, 
-      { 
-        id:6,
-      img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-      }, 
-      { 
-        id:7,
-      img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-      }, 
-      { 
-        id:8,
-      img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-      }, 
-      { 
-        id:9,
-      img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-      }, ],
+    //   // 要存一份copy用于记录
+    //   listCopy: [{ 
+    //     id: 0,
+    //     img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
+    //   }, 
+    //   { 
+    //     id: 1,
+    //   img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
+    //   }, 
+    //   { 
+    //     id:2,
+    //   img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
+    //   }, 
+    //   { 
+    //     id:3,
+    //   img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
+    //   }, 
+    //   { 
+    //     id:4,
+    //   img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
+    //   }, 
+    //   {
+    //     id:5,
+    //     img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
+    //   }, 
+    //   { 
+    //     id:6,
+    //   img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
+    //   }, 
+    //   { 
+    //     id:7,
+    //   img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
+    //   }, 
+    //   { 
+    //     id:8,
+    //   img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
+    //   }, 
+    //   { 
+    //     id:9,
+    //   img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
+    //   }, ],
   },
   props: {},
 
   didMount() {
     // this.data.list.map
+    getCommodity({type: LIKE}).then(({data}) => {
+      this.setData({list : data, listCopy: data});
+    });
+    console.log(this.data.list);
   },
   didUpdate() {},
   didUnmount() {},

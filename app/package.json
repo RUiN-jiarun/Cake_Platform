@@ -4,6 +4,7 @@
   },
   "dependencies": {
     "@alicloud/mpserverless-node-sdk": "^1.0.0",
+    "@antv/f2": "^3.8.9",
     "mini-antui": "^0.4.35",
     "taro-ui": "^2.3.4"
   },

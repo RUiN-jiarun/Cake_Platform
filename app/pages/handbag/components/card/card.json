@@ -1,3 +1,6 @@
 {
-  "component": true
+  "component": true,
+  "usingComponents": {
+    "select-button": "/components/select-button/select-button"
+  }
 }

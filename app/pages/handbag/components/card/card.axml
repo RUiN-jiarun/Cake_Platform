@@ -26,9 +26,27 @@
       >
       <view className='images-box'
             style = "transform:rotate({{tiltAngle[index]}}deg)" >
-        <image src={{item.img}} className='images'></image>
+        <view display="inline-box">
+          <image src={{item.img}} className='images'></image>
+          <view className="basic-info" display="flex">
+            <view className="title">{{item.name}}
+              <view className="shop">{{item.shop}}
+              </view>
+            </view>
+          </view>
+        </view>
+        <view className="divider"></view>
+        <view className="tag">
+          <view class="order-section-body__tag" a:for="{{item.tag}}" a:for-item="t">
+            {{t.name}}
+          </view>
+        </view>
+        <view className="divider"></view>
+        <view className="description">{{item.description}}</view>
+
+
       </view>
-      
+       
       </movable-view>
     </movable-area>
 </view>

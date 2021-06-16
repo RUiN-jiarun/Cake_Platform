@@ -483,54 +483,91 @@ export var picCommodity = {
 };
 
 export var likeCommodity = {
-  data: [
-    {
-      id: 0,
-      cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "No.1蛋糕",
-      canSelfPickUp: true,
-      price: 39,
-      sales: 30,
-    },
-    {
-      id: 1,
-      cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "No.2蛋糕",
-      canSelfPickUp: true,
-      price: 39,
-      sales: 30,
-    },
-    {
-      id: 2,
-      cover:
-        "https://img01.yzcdn.cn/upload_files/2018/02/01/Fn-vfcw2wdrL_LZzoPeY1D7HUQE3.jpg!large.webp",
-      title: "烂蛋糕",
-      canSelfPickUp: false,
-      price: 30,
-      sales: 30,
-    },
-    {
-      id: 3,
-      cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "烂蛋糕",
-      canSelfPickUp: true,
-      price: 30,
-      sales: 39,
-    },
-    {
-      id: 4,
-      cover:
-        "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*9CzCSrLQgvsAAAAAAAAAAABkARQnAQ",
-      title: "垃圾蛋糕",
-      canSelfPickUp: false,
-      price: 30,
-      sales: 30,
-    },
-  ],
-};
+  data: [{ 
+        id: 0,
+        img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
+        name: '芜~',
+        shop: '店铺a',
+        tag:[{
+          id: 1,
+          name: '外观新颖',
+          num: 3,
+        },
+        {
+          id: 2,
+          name: '口味独特',
+          num: 3,
+        }]
+      }, 
+      { 
+        id: 1,
+        img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
+        name: '芜~',
+        shop: '店铺a',
+      }, 
+      { 
+        id:2,
+        img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
+        name: '芜~',
+        shop: '店铺a',
+      }, 
+      { 
+        id:3,
+        img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
+        name: '芜~',
+        shop: '店铺po',
+      }, 
+      { 
+        id:4,
+        img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
+        name: '芜~',
+        shop: '店铺a',
+      }, 
+      {
+        id:5,
+        img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
+        name: '芜~',
+        shop: '店铺xy',
+      }, 
+      { 
+        id:6,
+        img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
+        name: '芜~',
+        shop: '店铺v',
+      }, 
+      { 
+        id:7,
+        img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
+        name: 'hahahaha~',
+        shop: '店铺a',
+      }, 
+      { 
+        id:8,
+        img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
+        name: 'Test2~',
+        shop: '店铺b',
+      }, 
+      { 
+        id:9,
+        img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
+        name: 'Test1',
+        shop: '店铺a',
+        tag:[{
+          id: 1,
+          name: '外观新颖',
+          num: 3,
+        },
+        {
+          id: 2,
+          name: '口味独特',
+          num: 3,
+        }],
+        description: '隔壁小孩都馋哭了',
+      },
+    ],
+  };
+
+
 
 
 
