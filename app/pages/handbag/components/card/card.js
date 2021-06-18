@@ -1,4 +1,4 @@
-import { getCommodity } from '../../../../services/commodity';
+import { getCommodity, getLoveList, getTickets } from '../../../../services/commodity';
 import { LIKE } from '/asserts/CommodityType';
 
 Component({
@@ -15,129 +15,10 @@ Component({
     unlike: [false,false,false,false,false,false,false,false,false,false],
     list: [],
     listCopy: [],
-    // list: [{ 
-    //     id: 0,
-    //     img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-    //     name: '芜~',
-    //     shop: '店铺a',
-    //     tag:[{
-    //       id: 1,
-    //       name: '外观新颖',
-    //       num: 3,
-    //     },
-    //     {
-    //       id: 2,
-    //       name: '口味独特',
-    //       num: 3,
-    //     }]
-    //   }, 
-    //   { 
-    //     id: 1,
-    //     img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-    //     name: '芜~',
-    //     shop: '店铺a',
-    //   }, 
-    //   { 
-    //     id:2,
-    //     img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-    //     name: '芜~',
-    //     shop: '店铺a',
-    //   }, 
-    //   { 
-    //     id:3,
-    //     img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-    //     name: '芜~',
-    //     shop: '店铺po',
-    //   }, 
-    //   { 
-    //     id:4,
-    //     img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-    //     name: '芜~',
-    //     shop: '店铺a',
-    //   }, 
-    //   {
-    //     id:5,
-    //     img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-    //     name: '芜~',
-    //     shop: '店铺xy',
-    //   }, 
-    //   { 
-    //     id:6,
-    //     img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-    //     name: '芜~',
-    //     shop: '店铺v',
-    //   }, 
-    //   { 
-    //     id:7,
-    //     img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-    //     name: 'hahahaha~',
-    //     shop: '店铺a',
-    //   }, 
-    //   { 
-    //     id:8,
-    //     img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-    //     name: 'Test2~',
-    //     shop: '店铺b',
-    //   }, 
-    //   { 
-    //     id:9,
-    //     img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-    //     name: 'Test1',
-    //     shop: '店铺a',
-    //     tag:[{
-    //       id: 1,
-    //       name: '外观新颖',
-    //       num: 3,
-    //     },
-    //     {
-    //       id: 2,
-    //       name: '口味独特',
-    //       num: 3,
-    //     }],
-    //     description: '隔壁小孩都馋哭了',
-    //   },],
-      
-    //   // 要存一份copy用于记录
-    //   listCopy: [{ 
-    //     id: 0,
-    //     img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-    //   }, 
-    //   { 
-    //     id: 1,
-    //   img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-    //   }, 
-    //   { 
-    //     id:2,
-    //   img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-    //   }, 
-    //   { 
-    //     id:3,
-    //   img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-    //   }, 
-    //   { 
-    //     id:4,
-    //   img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-    //   }, 
-    //   {
-    //     id:5,
-    //     img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-    //   }, 
-    //   { 
-    //     id:6,
-    //   img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-    //   }, 
-    //   { 
-    //     id:7,
-    //   img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-    //   }, 
-    //   { 
-    //     id:8,
-    //   img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-    //   }, 
-    //   { 
-    //     id:9,
-    //   img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-    //   }, ],
+    isWin: false,
+    // 模拟定位数据
+    loc_name: "浙江大学玉泉校区",
+    loc_address:  "杭州市西湖区浙大路38号",
   },
   props: {},
 
@@ -146,12 +27,30 @@ Component({
     getCommodity({type: LIKE}).then(({data}) => {
       this.setData({list : data, listCopy: data});
     });
-    console.log(this.data.list);
+    // console.log(this.data.list);
   },
   didUpdate() {},
   didUnmount() {},
   
   methods: {
+    // 模拟定位API
+    chooseLocation() {
+    var that = this
+    my.chooseLocation({
+         success:(res)=>{
+          console.log(JSON.stringify(res))
+          that.setData({
+            loc_name:res.name,
+            loc_addr:res.address
+          })
+        },
+        fail:(error)=>{
+          my.alert({content: '调用失败：'+JSON.stringify(error), });
+        },
+    });
+    },
+
+
     // 触摸触发
     onTouchStart(e) {
       console.log('touch');
@@ -202,6 +101,22 @@ Component({
           tiltAngleT[i] = dxangle,
           againX[i] = false;
           againY[i] = false;
+          // 向右显示喜欢
+          if (dxplace > 0) {
+            my.showToast({
+              type: 'success',
+              content: '喜欢',
+              duration: 500,
+            });
+          }
+          // 向左显示换一个
+          if (dxplace < 0) {
+            my.showToast({
+              type: 'exception',
+              content: '换一个',
+              duration: 500,
+            });
+          }
         } else {
           tiltAngleT[i] = '0',
           againX[i] = false;
@@ -221,11 +136,7 @@ Component({
     // 取消
     onCancel(e) {
       console.log('cancel');
-      // if (this.data.like) {
-      //   this.triggerEvent('like', { uid: this.data.user.uid }, {})
-      // } else if (this.data.unlike) {
-      //   this.triggerEvent('unlike', { uid: this.data.user.uid }, {})
-      // }
+
       this.setData({ 
         tiltAngle: ['0','0','0','0','0','0','0','0','0','0'],
         x: ['16','16','16','16','16','16','16','16','16','16'],
@@ -242,9 +153,17 @@ Component({
         })
       }
       console.log(this.data.like);
-      if (e.currentTarget.id == 0)
-        console.log(this.isGetPrice(this.data.like));
-        console.log(this.data.winTicket);
+      if (e.currentTarget.id == 0) {
+        var win = this.isGetPrice(this.data.like);
+        this.setData({isWin : win});
+        // 如果中奖，把券加入list
+        if (win) {
+          for (var i in this.data.winTicket) {
+            this.addToTickets(this.data.winTicket[i]);
+          }
+        }
+      }
+        
     },
 
     // 判断是否中奖
@@ -260,7 +179,11 @@ Component({
           cnt++;
         } 
       }
-      
+      console.log(ticket);
+      // 不管中没中奖，都要把东西加到收藏夹
+      for (var i in ticket) {
+        this.addToCollection(ticket[i], this.getToday());
+      }
       // 中奖概率算法
       if (cnt == 0)
         return false;
@@ -306,10 +229,77 @@ Component({
       }
     },
 
+    // 格式化日期：yyyy.MM.dd
+    formatDate(date) {
+        var myyear = date.getFullYear();
+        var mymonth = date.getMonth() + 1;
+        var myweekday = date.getDate();
+    
+        // if (mymonth < 10) {
+        //     mymonth = "0" + mymonth;
+        // }
+        // if (myweekday < 10) {
+        //     myweekday = "0" + myweekday;
+        // }
+        return (myyear + "." + mymonth + "." + myweekday);
+    },
+
+    // 获取今天的日期
+    getToday() {
+      var date = new Date();
+      return this.formatDate(date);
+    },
+
+    // 加入收藏夹
+    addToCollection(item, date) {
+      // console.log(item);
+      // console.log(date);
+      // 6.5 确定可以搞到对应的信息了
+      getLoveList().then(function (data){
+        var info = data.data;
+        var changeInfo;
+        for (var i in info) {
+          if (i.time === date) {
+            changeInfo = i;
+          }
+        }
+        if (!changeInfo)
+          info.unshift({time: date, 
+            bakeIdeas: [{id: item.id,
+              title: item.title,
+              image: item.cover,
+              likeState: true,
+              tag: item.tags,
+              voteCount: item.voteCount,}]})
+        else 
+          changeInfo.bakeIdeas.push({
+            id: item.id,
+            title: item.title,
+            image: item.cover,
+            likeState: true,
+            tag: item.tags,
+            voteCount: item.voteCount,
+          })
+      })
+      getLoveList().then(function (data){
+        console.log(data);
+      })
+    },
+
+    addToTickets(item) {
+      getTickets().then(function (data){
+        var info = data.data;
+        info.push({
+          ticketType: item.ticketType,
+          shop: item.shop,
+          title: item.title,
+          price: item.price,
+          startAt: item.startAt,
+          endAt: item.endAt,
+        })
+      })
+    },
+
   },
-
-
-
-  
 
 });

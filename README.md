@@ -104,3 +104,20 @@ Junior II - 技术创意
 * 6.22~6.24 报告、PPT、海报
 * 6.25 final
 
+
+
+## FINAL 分工
+
+周五 pre DDL
+
+周日 作业提交 DDL ——报告
+
+* “新品人气榜”的tag显示——mjy
+* 优惠券数据跳转——ljr——done
+* 收藏数据跳转——ljr——done
+* 模拟定位——ljr——done
+* 随机roll——mjy
+
+* 发起创意增加券——syt
+
+* 写报告——syt

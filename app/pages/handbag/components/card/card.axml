@@ -1,13 +1,23 @@
 <view>
-    <!-- <movable-area>
-      <movable-view 
-        x="{{x}}" 
-        y="{{y}}" 
-        direction="all"
-        onTouchStart="onTouchStart"
-        onTouchMove="onTouchMove"
-        onTouchCancel="onTouchCancel">movable-view</movable-view>
-    </movable-area> -->
+    <view class="location">
+      <view class="location-description">
+        <image
+          class="location-description__logo"
+          src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*JOy0QqiN0qUAAAAAAAAAAABkARQnAQ"
+          mode="scaleToFill"
+        />
+        <text class="location-description__title">{{loc_name}}</text>
+      </view>
+      <view class="location-action" onTap="chooseLocation">
+        选择位置
+        <image
+          src="https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*tuXAT6mNwWUAAAAAAAAAAABkARQnAQ"
+          mode="scaleToFill"
+        />
+      </view>
+    </view>
+
+
     <movable-area className="stroll-shop">
       <movable-view
         a:for="{{list}}"
@@ -27,9 +37,9 @@
       <view className='images-box'
             style = "transform:rotate({{tiltAngle[index]}}deg)" >
         <view display="inline-box">
-          <image src={{item.img}} className='images'></image>
+          <image src={{item.cover}} className='images'></image>
           <view className="basic-info" display="flex">
-            <view className="title">{{item.name}}
+            <view className="title">{{item.title}}
               <view className="shop">{{item.shop}}
               </view>
             </view>
@@ -43,10 +53,57 @@
         </view>
         <view className="divider"></view>
         <view className="description">{{item.description}}</view>
-
-
       </view>
        
       </movable-view>
+
+
+      <block a:if="{{isWin}}">
+        <image className="img_win" mode='scaleToFill' src="../../../../imgs/中奖.png" />
+        <block a:for="{{winTicket}}" a:for-item="ticket">
+          <view a:if="{{ticket.ticketType==="money"}}" class="ticket-container">
+            <view class="ticket">
+              <view class="ticket-left">
+                <view class="ticket-left__line-price">
+                  <view class="ticket-left__price-logo">¥</view>
+                  <view class="ticket-left__price">{{ticket.price}}</view>
+                  <view class="ticket-left__price-dec">{{ticket.shop}}店铺优惠券</view>
+                </view>
+                <view class="ticket-left__baseline">满{{ticket.price * 2}}元可用</view>
+                <view class="ticket-left__time">有效期：{{ticket.startAt}} - {{ticket.endAt}}</view>
+              </view>
+              <!-- <view class="ticket-confirm">
+                去使用
+              </view> -->
+              <view class="circle"></view>
+            </view>
+          </view>
+
+          <view a:else class="ticket-container">
+            <view class="ticket">
+              <view class="ticket-left">
+                <view class="ticket-left__line-price">
+                  <!-- <view class="ticket-left__price-logo">¥</view> -->
+                  <view class="ticket-left__price">{{ticket.title}}</view>
+                  <view class="ticket-left__price-dec"> 免费试吃券</view>
+                </view>
+                <view class="ticket-left__baseline">凭该券可在{{ticket.shop}}免费享用一次该新品</view>
+                <view class="ticket-left__time">有效期：{{ticket.startAt}} - {{ticket.endAt}}</view>
+              </view>
+              <!-- <view class="ticket-confirm">
+                去使用
+              </view> -->
+              <view class="circle"></view>
+            </view>
+          </view>
+        </block>
+      </block>
+      
+      <block a:else>
+        <image className="img_notwin" mode='scaleToFill' src="../../../../imgs/未中奖.png" />
+      </block>
+
+
     </movable-area>
+
 </view>

@@ -143,6 +143,27 @@ export var allCommodity = {
           ],
         },
       ],
+
+      comments: [
+        {
+          id: 0,
+          name:"Anna",
+          useravatar: "https://c-ssl.duitang.com/uploads/item/202002/19/20200219184554_wwnvh.jpg",
+          description: "注释in all",
+          time: "2021-6-9",
+          likeState: false,
+          num:0
+        },
+        {
+          id: 1,
+          name:"Carrie",
+          useravatar: "https://c-ssl.duitang.com/uploads/item/202002/19/20200219184554_wwnvh.jpg",
+          description: "好吃吗好吃吗好吃吗好吃吗好吃吗好吃吗",
+          time: "2021-6-10",
+          likeState: false,
+          num:0
+        }
+      ],
     },
     {
       id: 2,
@@ -203,6 +224,26 @@ export var allCommodity = {
             },
           ],
         },
+      ],
+      comments: [
+        {
+          id: 0,
+          name:"Anna",
+          useravatar: "https://c-ssl.duitang.com/uploads/item/202002/19/20200219184554_wwnvh.jpg",
+          description: "注释in all",
+          time: "2021-6-9",
+          likeState: false,
+          num:0
+        },
+        {
+          id: 1,
+          name:"Carrie",
+          useravatar: "https://c-ssl.duitang.com/uploads/item/202002/19/20200219184554_wwnvh.jpg",
+          description: "好吃吗好吃吗好吃吗好吃吗好吃吗好吃吗",
+          time: "2021-6-10",
+          likeState: false,
+          num:0
+        }
       ],
     },
     {
@@ -454,7 +495,7 @@ export var picCommodity = {
       cover:
         "https://img01.yzcdn.cn/upload_files/2017/12/29/Fr5UOYsGAxzWQiWFipG3eoBUiHtC.jpg!large.webp",
       title: "蛋糕5",
-            tags: [
+      tags: [
         {
           id: 1,
           name: "外观",
@@ -485,9 +526,9 @@ export var picCommodity = {
 export var likeCommodity = {
   data: [{ 
         id: 0,
-        img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-        name: '芜~',
-        shop: '店铺a',
+        cover: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
+        title: '布朗尼',
+        shop: 'A',
         tag:[{
           id: 1,
           name: '外观新颖',
@@ -497,61 +538,95 @@ export var likeCommodity = {
           id: 2,
           name: '口味独特',
           num: 3,
-        }]
+        }],
+        description:"香甜可口 纵享丝滑",
+        ticketType: "try",
+        startAt: "2021.6.1",
+        endAt: "2021.7.31",
       }, 
       { 
         id: 1,
-        img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-        name: '芜~',
-        shop: '店铺a',
+        cover: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
+        title: '红丝绒蛋糕',
+        shop: 'B',
+        description:"高级而奢华的外观",
+        ticketType: "try",
+        startAt: "2021.6.1",
+        endAt: "2021.7.31",
       }, 
       { 
         id:2,
-        img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-        name: '芜~',
-        shop: '店铺a',
+        cover: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
+        title: 'XX泡芙',
+        shop: 'C',
+        ticketType: "money",
+        price: 20,
+        startAt: "2021.6.1",
+        endAt: "2021.9.30",
       }, 
       { 
         id:3,
-        img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-        name: '芜~',
-        shop: '店铺po',
+        cover: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
+        title: 'XX提拉米苏',
+        shop: 'D',
+        ticketType: "money",
+        price: 20,
+        startAt: "2021.6.1",
+        endAt: "2021.9.30",
       }, 
       { 
         id:4,
-        img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-        name: '芜~',
-        shop: '店铺a',
+        cover: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
+        title: '黑森林蛋糕',
+        shop: 'E',
+        ticketType: "money",
+        price: 15,
+        startAt: "2021.6.1",
+        endAt: "2021.9.30",
       }, 
       {
         id:5,
-        img: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
-        name: '芜~',
-        shop: '店铺xy',
+        cover: 'https://edgefix-image.edgecom.top/ABD846F6672997A7F76CD38E8A57F954.jpg', 
+        title: 'XX华夫饼',
+        shop: 'F',
+        ticketType: "try",
+        startAt: "2021.6.1",
+        endAt: "2021.7.31",
       }, 
       { 
         id:6,
-        img: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
-        name: '芜~',
-        shop: '店铺v',
+        cover: 'https://edgefix-image.edgecom.top/F6E5801C304CC76DA63C02C9FB38B8F4.jpg', 
+        title: 'XXXXX~',
+        shop: 'G',
+        ticketType: "money",
+        price: 30,
+        startAt: "2021.6.1",
+        endAt: "2021.9.30",
       }, 
       { 
         id:7,
-        img: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
-        name: 'hahahaha~',
-        shop: '店铺a',
+        cover: 'https://edgefix-image.edgecom.top/D518952AD1DD61B2D32556E20CC527C4.jpg', 
+        title: '熔岩蛋糕',
+        shop: 'X',
+        ticketType: "try",
+        startAt: "2021.6.1",
+        endAt: "2021.7.31",
       }, 
       { 
         id:8,
-        img: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
-        name: 'Test2~',
-        shop: '店铺b',
+        cover: 'https://edgefix-image.edgecom.top/1D187E28B349679908A44BBE81F3D3CA.jpg', 
+        title: 'XX马卡龙',
+        shop: 'Y',
+        ticketType: "money",
+        price : 15,
+        startAt: "2021.6.1",
+        endAt: "2021.9.30",
       }, 
       { 
         id:9,
-        img: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
-        name: 'Test1',
-        shop: '店铺a',
+        cover: 'https://edgefix-image.edgecom.top/1129A411AC9CF5F81187CBED181B6F57.jpg', 
+        title: '翻糖小点',
+        shop: 'Z',
         tag:[{
           id: 1,
           name: '外观新颖',
@@ -563,12 +638,12 @@ export var likeCommodity = {
           num: 3,
         }],
         description: '隔壁小孩都馋哭了',
+        ticketType: "try",
+        startAt: "2021.6.1",
+        endAt: "2021.7.31",
       },
     ],
   };
-
-
-
 
 
 // 收藏夹栏放这儿
@@ -579,7 +654,7 @@ export var loveList = {
         bakeIdeas: [
           {
             title: '柠檬卷',
-            image: 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*DenfRpLr6NEAAAAAAAAAAABkARQnAQ',
+            image: 'https://gw.alipayobjects.com/mdn/rms_107da2/afts/cover/A*DenfRpLr6NEAAAAAAAAAAABkARQnAQ',
             tag: [
               {
                 id: 1,
@@ -673,4 +748,28 @@ export var myList = {
             id: 1,
           },
         ],
+};
+
+// 券放这儿
+export var myTickets = {
+  data: [
+      {
+        ticketType: "money",
+        shop: "哈哈哈蛋糕店",
+        title: "",
+        price: 30,
+        
+        startAt: '2019.4.1',
+        endAt: '2019.12.31',
+      },
+      {
+        ticketType: "try",
+        shop: "哈哈哈蛋糕店",
+        title: "嘻嘻蛋糕",
+        price: 0,
+        startAt: '2019.4.1',
+        endAt: '2019.12.31',
+      },
+      
+    ],
 };

@@ -1,5 +1,5 @@
 page {
-  background-color: #fff;
+  background-color: #fdf4e5;
 }
 .ticket-container {
   padding: 9rpx 24rpx;

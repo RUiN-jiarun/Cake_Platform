@@ -11,12 +11,15 @@ Component({
   },
   props: {
     show: false,
-    onClose: () => {},
-    onConfirm: () => {},
-    onConfirmVote: () => {},
+    onClose: () => { },
+    onConfirm: () => { },
+    onConfirmVote: () => { },
     commodityId: '',
   },
-  didMount() {},
+  didMount() { },
+  // deriveDataFromProps(nextProps) {
+  //   this.setData({ currentCommodity: nextProps.currentCommodity, });
+  // },
   didUpdate(preProps) {
     console.log('更新');
     const { commodityId } = this.props;
@@ -25,7 +28,7 @@ Component({
       this.fetchCommodityDetailById(commodityId);
     }
   },
-  didUnmount() {},
+  didUnmount() { },
   methods: {
     onClose() {
       this.props.onClose();
@@ -41,7 +44,8 @@ Component({
             // selectedOptionIds: data[id].options.map(item =>
             //   this.getFirstId(item.values)
             // ),
-          })}
+          })
+        }
         )
         .catch(err =>
           log.error(
@@ -80,16 +84,37 @@ Component({
     },
     onLikeComments(e) {
       var attr = e.currentTarget.dataset.attr;
-      var state = this.data.currentCommodity.comments[attr].likeState;
-      this.data.currentCommodity.comments[attr].likeState = !state;
-      my.showToast({
-        type: 'success',
-        content: '点赞成功',
-        duration: 3000,
-      });
+      var key=  'currentCommodity.comments['+attr.toString()+'].likeState';
+      var ostate=this.data.currentCommodity.comments[attr].likeState
+      var nstate=!ostate;
+
+      this.setData({[key]:nstate});
+      // this.data.currentCommodity.comments[attr].likeState = !state;
+
+      console.log(nstate);
       console.log(this.data.currentCommodity.comments[attr].likeState);
       // this.props.onLikeComments(attr);
-      this.onClose();
+      // this.onClose();
     },
+    bindFormSubmit(e) {
+      this.AddNewComment(e.detail.value.textarea);
+      // my.alert({
+      //   content: e.detail.value.textarea,
+      // });
+    },
+    AddNewComment(remark) {
+      var ncom =
+      {
+        id: 2,
+        name: "什么鬼",
+        useravatar: "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*O-qpSpu9vgQAAAAAAAAAAABkARQnAQ",
+        description: remark,
+        time: "2021-6-17",
+        likeState: false,
+        num: 0
+      };
+      this.setData({ 'currentCommodity.comments': [...this.data.currentCommodity.comments, ncom]});
+
+    }
   },
 });

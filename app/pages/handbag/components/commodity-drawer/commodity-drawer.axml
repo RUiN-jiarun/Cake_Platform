@@ -1,35 +1,16 @@
 <!-- 这里是商品详细信息的界面展示，现在是以购物车的形式表现的 -->
 <!-- currentCommodity对应了../../services/__mock__/commodity.js中的commodityDetail -->
-<drawer
-  show="{{show}}"
-  onClose="onClose"
->
-  <view
-    
-    class="commodity"
-  >
+<drawer show="{{show}}" onClose="onClose">
+  <view class="commodity">
     <view class="commodity-info">
-      <image
-        class="commodity-info__cover"
-        src="{{currentCommodity.cover}}"
-        mode="scaleToFill"
-      />
+      <image class="commodity-info__cover" src="{{currentCommodity.cover}}" mode="scaleToFill" />
       <view class="commodity-info__right">
         <view class="commodity-info__name">{{currentCommodity.title}}</view>
-        <!-- <view class="commodity-info__price-section">
-          <view class="commodity-info__price-icon">¥</view>
-          <view class="commodity-info__price">{{currentCommodity.price}}</view>
-        </view>
-        <view class="commodity-info__storage">库存{{currentCommodity.storage}}件</view>
-        <view class="commodity-info__type">已选：{{currentCommodity.type}}</view> -->
+        <!--<view class="commodity-info__price-section"><view class="commodity-info__price-icon">¥</view><view class="commodity-info__price">{{currentCommodity.price}}</view></view><view class="commodity-info__storage">库存{{currentCommodity.storage}}件</view><view class="commodity-info__type">已选：{{currentCommodity.type}}</view> -->
       </view>
     </view>
     <view class="commodity-tag">
-      <select-button
-        selectedOptionId="{{selectedTagId}}"
-        options="{{currentCommodity.tags}}"
-        onSelectOption="onTagSelect"
-      />
+      <select-button selectedOptionId="{{selectedTagId}}" options="{{currentCommodity.tags}}" onSelectOption="onTagSelect" />
     </view>
 
 
@@ -47,11 +28,7 @@
       </view>
       <view class="commodity-detail__body">
         <view class="commodity-detail__body-left">
-          <image
-            class="commodity-detail__body-location"
-            src="../../../../icons/地址.png"
-            mode="scaleToFill"
-          />
+          <image class="commodity-detail__body-location" src="../../../../icons/地址.png" mode="scaleToFill" />
           <view class="commodity-detail__body-detail">
             {{currentCommodity.raw}}
           </view>
@@ -70,11 +47,7 @@
       </view>
       <view class="commodity-detail__body">
         <view class="commodity-detail__body-left">
-          <image
-            class="commodity-detail__body-location"
-            src="../../../../icons/地址.png"
-            mode="scaleToFill"
-          />
+          <image class="commodity-detail__body-location" src="../../../../icons/地址.png" mode="scaleToFill" />
           <view class="commodity-detail__body-detail">
             {{currentCommodity.ingredient}}
           </view>
@@ -93,11 +66,7 @@
       </view>
       <view class="commodity-detail__body">
         <view class="commodity-detail__body-left">
-          <image
-            class="commodity-detail__body-location"
-            src="../../../../icons/地址.png"
-            mode="scaleToFill"
-          />
+          <image class="commodity-detail__body-location" src="../../../../icons/地址.png" mode="scaleToFill" />
           <view class="commodity-detail__body-detail">
             {{currentCommodity.subject}}
           </view>
@@ -116,11 +85,7 @@
       </view>
       <view class="commodity-detail__body">
         <view class="commodity-detail__body-left">
-          <image
-            class="commodity-detail__body-location"
-            src="../../../../icons/地址.png"
-            mode="scaleToFill"
-          />
+          <image class="commodity-detail__body-location" src="../../../../icons/地址.png" mode="scaleToFill" />
           <view class="commodity-detail__body-detail">
             {{currentCommodity.appearance}}
           </view>
@@ -133,66 +98,44 @@
     <view>
       <view a:for="{{currentCommodity.comments}}" a:for-item="eachComment" class="comment-section">
         <avatar src="{{eachComment.useravatar}}" size="sm" name="{{eachComment.name}}" desc="{{eachComment.time}}" />
-        <view class=" {{eachComment.likeState?'comment-section_right-red':'comment-section_right'}}" data-attr="{{eachComment.id}}" onTap="onLikeComments">
-          <am-icon type="good" size="25"/>
+        <view class=" comment-section_right" data-attr="{{eachComment.id}}" onTap="onLikeComments">
+          <am-icon type="{{eachComment.likeState?'like_':'like'}}" size="25"/>
+          
         </view>
         <view class="talk-section">
           <text>{{eachComment.description}}</text>
         </view>
-  
+
       </view>
     </view>
 
     <view class="commodity-divider"></view>
 
-    <!-- <view class="commodity-option">
-      <view
-        a:for="{{currentCommodity.options}}"
-        class="commodity-option-item"
-      >
-        <view class="commodity-option-item__title">
-          {{item.name}}
+    <view class="remarkSubmit-section">
+      <view class="remarkSubmit-section-title">发表评论</view>
+      <form onSubmit="bindFormSubmit">
+        <view class="remarkSubmit-section-demo">
+          <textarea name="textarea" placeholder="在这里发表你对新品的看法哦" />
         </view>
-        <view class="commodity-option-item__value">
-          <select-button
-            selectedOptionId="{{selectedOptionIds[index]}}"
-            options="{{item.values}}"
-            identifyId="{{index}}"
-            onSelectOption="onOptionSelect"
-          />
+        <view class="remarkSubmit-section-btns">
+          <button form-type="submit" size="mini" type="default" class="btns-color">提交</button>
         </view>
-      </view>
-    </view> -->
+      </form>
+    </view>
+    <!--<view class="commodity-option"><view a:for="{{currentCommodity.options}}" class="commodity-option-item"><view class="commodity-option-item__title">
+          {{item.name}}</view><view class="commodity-option-item__value"><select-button selectedOptionId="{{selectedOptionIds[index]}}" options="{{item.values}}" identifyId="{{index}}" onSelectOption="onOptionSelect" /></view></view></view> -->
 
     <view class="commodity-divider"></view>
 
-    <!-- <view class="commodity-purchase-number">
-      <view class="commodity-purchase-number__header">
-        <view class="commodity-purchase-number__title">
-          购买数量
-        </view>
-        <view class="commodity-purchase-number__description">
-          （仅支持{{currentCommodity.maxPurchaseNumber}}倍购买）
-        </view>
-      </view>
-      <purchase-number
-        value="{{purchaseNumber}}"
-        max="{{currentCommodity.maxPurchaseNumber}}"
-        onChange="onPurchaseNumberChange"
-      >
-    </view> -->
-    
-    <view style="text-align:center"> 
-      <view
-        class="commodity-confirm"
-        onTap="onConfirm"
-      >     
+    <!--<view class="commodity-purchase-number"><view class="commodity-purchase-number__header"><view class="commodity-purchase-number__title">
+          购买数量</view><view class="commodity-purchase-number__description">
+          （仅支持{{currentCommodity.maxPurchaseNumber}}倍购买）</view></view><purchase-number value="{{purchaseNumber}}" max="{{currentCommodity.maxPurchaseNumber}}" onChange="onPurchaseNumberChange"></view> -->
+
+    <view style="text-align:center">
+      <view class="commodity-confirm" onTap="onConfirm">     
         收藏
       </view>
-      <view
-        class="commodity-confirm"
-        onTap="onConfirmVote"
-      >
+      <view class="commodity-confirm" onTap="onConfirmVote">
         投票
       </view>
     </view>

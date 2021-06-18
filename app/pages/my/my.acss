@@ -1,5 +1,5 @@
 page {
-  background-color: #fff;
+  background-color: #fdf4e5;
 }
 .user-profile {
   display: flex;
@@ -60,7 +60,7 @@ page {
 }
 .divider {
   height: 1rpx;
-  background-color: #eee;
+  background-color: #819ac3;
 }
 .divider.--middle {
   width: 677rpx;
@@ -94,6 +94,7 @@ page {
   font-size: 32rpx;
   color: #333;
   line-height: 130rpx;
+  background-color: #fdf4e5;
 }
 .list-item .am-list-content,
 .list-item .am-list-extra {

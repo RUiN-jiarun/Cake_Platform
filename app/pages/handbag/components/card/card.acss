@@ -1,3 +1,6 @@
+.page{
+  background-color: #fdf4e5;
+}
 .stroll-tab {
   width: 100%;
   min-height: 100vh;
@@ -121,8 +124,21 @@
   font-size: 36rpx;
 }
 
+.img_notwin {
+  position: relative;
+  z-index: -1;
+  left: 20px;
+  width: 320px;
+  height: 320px;
+}
 
-
+.img_win {
+  position: relative;
+  z-index: -1;
+  left: 9px;
+  width: 360px;
+  height: 94px;
+}
 
 
 
@@ -208,4 +224,115 @@
   font-size: 28px;
   margin-top: 40px;
   margin-bottom: 50px;
+}
+
+
+
+
+.ticket {
+  z-index: -2;
+  left: 30px;
+  width: 320px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12rpx;
+  background: #ffede6;
+  position: relative;
+}
+.ticket-left {
+  padding: 26rpx 20rpx 20rpx;
+}
+.ticket-left__line-price {
+  display: flex;
+  align-items: baseline;
+}
+.ticket-left__price-logo {
+  font-size: 26rpx;
+  color: #ff5000;
+  line-height: 20rpx;
+}
+.ticket-left__price {
+  font-size: 50rpx;
+  color: #ff5000;
+  line-height: 42rpx;
+  margin: 0 10rpx 0 6rpx;
+}
+.ticket-left__price-dec {
+  font-size: 26rpx;
+  color: #ff5000;
+  line-height: 24rpx;
+}
+.ticket-left__time,
+.ticket-left__baseline {
+  font-size: 20rpx;
+  color: #ff5000;
+  line-height: 20rpx;
+}
+.ticket-left__baseline {
+  margin-bottom: 12rpx;
+  margin-top: 20rpx;
+}
+.ticket-confirm {
+  background-image: linear-gradient(90deg, #ff9000 0%, #ff5000 100%);
+  border-radius: 10000rpx;
+  font-size: 24rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 30rpx;
+  padding: 8rpx 14rpx;
+  margin-right: 12rpx;
+}
+.circle {
+  width: 24rpx;
+  height: 24rpx;
+  border-radius: 50%;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%);
+  background-color: #fff;
+}
+
+.ticket-container {
+  left: 30px;
+  width: 320px;
+  height: 73px;
+}
+
+
+.location {
+  background: #fff;
+  font-size: 28rpx;
+  padding: 24rpx 24rpx 24rpx 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 82rpx;
+}
+.location-description {
+  display: flex;
+  align-items: center;
+  line-height: 22rpx;
+}
+.location-description__logo {
+  width: 32rpx;
+  height: 32rpx;
+  margin-right: 6rpx;
+}
+.location-description__title {
+  font-weight: bold;
+  padding-right: 10rpx;
+}
+.location-action {
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  color: #9a9a9a;
+}
+.location-action image {
+  margin-left: 20rpx;
+  width: 13rpx;
+  height: 24rpx;
 }

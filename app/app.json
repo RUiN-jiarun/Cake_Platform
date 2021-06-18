@@ -11,13 +11,13 @@
   ],
   "window": {
     "defaultTitle": "",
-    "titleBarColor": "#fff",
+    "titleBarColor": "#c89f78",
     "pullRefresh": false
   },
   "tabBar": {
     "textColor": "#333333",
-    "selectedColor": "#009D9A",
-    "backgroundColor": "#f2f2f2",
+    "selectedColor": "#c06c40",
+    "backgroundColor": "#f9e9da",
     "items": [
       {
         "pagePath": "pages/handbag/handbag",

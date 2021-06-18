@@ -8,6 +8,7 @@ import {
 
   loveList,         // 收藏夹信息
   myList,           // 我的发起的创意信息
+  myTickets,          // 奖券信息
 } from "./__mock__/commodity";
 import { ALL, TREND, LIKE } from "../asserts/CommodityType";
 
@@ -47,4 +48,10 @@ export const getLoveList = () => {
 
 export const getMyList = () => {
   return Promise.resolve(myList);
+};
+
+export const getTickets = () => {
+  // console.log(myList);
+  // console.log(tickets);
+  return Promise.resolve(myTickets);
 };

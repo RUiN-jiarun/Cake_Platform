@@ -1,3 +1,6 @@
+page {
+  background-color: #fdf4e5;
+}
 .title {
   margin-bottom: 0rpx;
 }
@@ -6,7 +9,7 @@
 }
 .order-section {
   border-radius: 25rpx;
-  background: rgb(241, 229, 207);
+  background: #fff;
   margin: 10rpx 24rpx 18rpx;
   padding: 0 25rpx;
 }
@@ -66,7 +69,7 @@
   color: #333;
   background: none;
   border-radius: 100rpx;
-  border-color:rgb(241, 229, 207);
+  border-color:#fff;
   line-height: 30rpx;
   margin-top:80rpx;
   margin-bottom: 8rpx;

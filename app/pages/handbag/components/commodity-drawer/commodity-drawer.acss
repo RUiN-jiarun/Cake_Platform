@@ -179,7 +179,8 @@
 
 /* 确定按钮————改编成收藏按钮或投票按钮 */
 .commodity-confirm {
-  background-image: linear-gradient(90deg, #ff9000 0%, #ff5000 100%);
+  /* background-image: linear-gradient(90deg, #ff9000 0%, #ff5000 100%); */
+  background-color: #c89f78;
   border-radius: 100000rpx;
   font-size: 35rpx;
   padding: 20rpx;
@@ -235,4 +236,33 @@
   text-align: justify;
   font-size: 15px;
   line-height: 20px;
+}
+
+.remarkSubmit-section{
+  width:340px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:20px;
+  margin-bottom: 20px;
+}
+.remarkSubmit-section-title{
+  font-size: 17px;
+  margin-bottom: 15px;
+}
+
+.remarkSubmit-section-demo{
+  font-size:15px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  border:1px solid #c89f78;
+}
+
+.remarkSubmit-section-btns{
+  text-align: center;
+  margin-right: 4px;
+  margin-top:20px;
+}
+
+.btns-color{
+  color:#c89f78;
 }

@@ -2,6 +2,7 @@
   display: flex;
   align-items: baseline;
   padding: 16rpx 24rpx;
+  
 }
 .tab-item {
   flex-shrink: 0;
@@ -18,5 +19,5 @@
   margin-left: 6rpx;
 }
 .tab-item--active {
-  color: #009d9a;
+  color: #c06c40;
 }

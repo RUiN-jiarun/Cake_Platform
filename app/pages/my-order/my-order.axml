@@ -25,7 +25,7 @@
         <view class="order-section-body__price">{{eachIdea.voteCount}}票</view>
 
         <button class="order-section-body__moreInfo-button" data-attr="{{eachIdea.id}}" onTap="onClickMe" >
-          <text class="more-icon">▪▪▪</text>
+          <text class="more-icon">...</text>
         </button>
 
         <!--<view class="order-section-body__num">x{{eachCommodity.num}}</view> -->
