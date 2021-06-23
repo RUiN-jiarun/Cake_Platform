@@ -8,46 +8,79 @@ Component({
     startX: '', // 开始位置
     placeX: '', // 开始位置-最终位置距离
     winTicket: [], // 抽到的奖券
-    tiltAngle: ['0','0','0','0','0','0','0','0','0','0'],
-    x: ['16','16','16','16','16','16','16','16','16','16'],
-    y: ['16','16','16','16','16','16','16','16','16','16'],
-    like: [false,false,false,false,false,false,false,false,false,false],
-    unlike: [false,false,false,false,false,false,false,false,false,false],
+    tiltAngle: ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+    x: ['16', '16', '16', '16', '16', '16', '16', '16', '16', '16'],
+    y: ['16', '16', '16', '16', '16', '16', '16', '16', '16', '16'],
+    like: [false, false, false, false, false, false, false, false, false, false],
+    unlike: [false, false, false, false, false, false, false, false, false, false],
     list: [],
     listCopy: [],
+    srclist: [],
     isWin: false,
+   
     // 模拟定位数据
     loc_name: "浙江大学玉泉校区",
-    loc_address:  "杭州市西湖区浙大路38号",
+    loc_address: "杭州市西湖区浙大路38号",
   },
   props: {},
-
-  didMount() {
-    // this.data.list.map
-    getCommodity({type: LIKE}).then(({data}) => {
-      this.setData({list : data, listCopy: data});
+  onInit(){
+    // 获取20个数据，从中随机10个出来
+    // 注意list和listcopy中每一个元素为{origindata:srclist[i], id}
+    getCommodity({ type: LIKE }).then(({ data }) => {
+      this.setData({ srclist: data},()=>{this.initList()});
     });
-    // console.log(this.data.list);
   },
-  didUpdate() {},
-  didUnmount() {},
-  
+  didMount() {
+    
+  },
+  didUpdate() { },
+  didUnmount() { },
+
   methods: {
+    initList() {
+      // 这里随机
+      var randomIndexArrayX = new Array();
+      var judgeExist = [false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false, false];
+      do {
+        var n = Math.floor(Math.random() * 20);  // 0-19之间的随机数
+        if (judgeExist[n] == false) {
+          randomIndexArrayX.push(n);
+          judgeExist[n]=true;
+          console.log(n);
+        }
+        else {
+          // 已经存在
+
+        }
+      } while (randomIndexArrayX.length != 10);
+
+      var templist=[];
+      
+      for(var i=0;i<10;i++){
+        var tempindex=randomIndexArrayX[i];
+        var dd=this.data.srclist[tempindex];
+        console.log(dd);
+        templist.push({origindata:dd, id:i});
+      }
+      this.setData({list:templist,listCopy:templist});
+      //console.log(this.data.list);
+      
+    },
     // 模拟定位API
     chooseLocation() {
-    var that = this
-    my.chooseLocation({
-         success:(res)=>{
+      var that = this
+      my.chooseLocation({
+        success: (res) => {
           console.log(JSON.stringify(res))
           that.setData({
-            loc_name:res.name,
-            loc_addr:res.address
+            loc_name: res.name,
+            loc_addr: res.address
           })
         },
-        fail:(error)=>{
-          my.alert({content: '调用失败：'+JSON.stringify(error), });
+        fail: (error) => {
+          my.alert({ content: '调用失败：' + JSON.stringify(error), });
         },
-    });
+      });
     },
 
 
@@ -68,10 +101,10 @@ Component({
           againY[i] = '16';
         }
       }
-      this.setData({ 
-        startX : e.touches[0].pageX,
-        x : againX,
-        y : againY,
+      this.setData({
+        startX: e.touches[0].pageX,
+        x: againX,
+        y: againY,
       });
     },
 
@@ -88,25 +121,25 @@ Component({
       let dxangle = (e.touches[0].pageX - this.data.startX) * 45 / 500;
       console.log(dxangle);
       // 遍历，判断拖动的该数组的位置
-      for (var i=0; i<this.data.list.length; i++) {
+      for (var i = 0; i < this.data.list.length; i++) {
         if (i == idx && dxplace > 50) {
           tiltAngleT[i] = dxangle,
-          againX[i] = true;
+            againX[i] = true;
           againY[i] = false;
         } else if (i == idx && dxplace <= -50) {
           tiltAngleT[i] = dxangle,
-          againX[i] = false;
+            againX[i] = false;
           againY[i] = true;
         } else if (i == idx && dxplace < 50 && dxplace > -50) {
           tiltAngleT[i] = dxangle,
-          againX[i] = false;
+            againX[i] = false;
           againY[i] = false;
           // 向右显示喜欢
           if (dxplace > 0) {
             my.showToast({
               type: 'success',
               content: '喜欢',
-              duration: 500,
+              duration: 1000,
             });
           }
           // 向左显示换一个
@@ -114,12 +147,12 @@ Component({
             my.showToast({
               type: 'exception',
               content: '换一个',
-              duration: 500,
+              duration: 1000,
             });
           }
         } else {
           tiltAngleT[i] = '0',
-          againX[i] = false;
+            againX[i] = false;
           againY[i] = false;
         }
       }
@@ -136,11 +169,11 @@ Component({
     // 取消
     onCancel(e) {
       console.log('cancel');
-
-      this.setData({ 
-        tiltAngle: ['0','0','0','0','0','0','0','0','0','0'],
-        x: ['16','16','16','16','16','16','16','16','16','16'],
-        y: ['16','16','16','16','16','16','16','16','16','16'],
+      my.hideToast();
+      this.setData({
+        tiltAngle: ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0'],
+        x: ['16', '16', '16', '16', '16', '16', '16', '16', '16', '16'],
+        y: ['16', '16', '16', '16', '16', '16', '16', '16', '16', '16'],
         // like: [false,false,false,false,false,false,false,false,false,false],
         // unlike: [false,false,false,false,false,false,false,false,false,false],
       });
@@ -148,14 +181,14 @@ Component({
       if (this.data.placeX > 50 || this.data.placeX < -50) {
         // this.data.list.pop();
         this.setData({
-          list: this.data.list.slice(0,e.currentTarget.id),
+          list: this.data.list.slice(0, e.currentTarget.id),
           // list: this.data.list.splice(-1,1),
         })
       }
       console.log(this.data.like);
       if (e.currentTarget.id == 0) {
         var win = this.isGetPrice(this.data.like);
-        this.setData({isWin : win});
+        this.setData({ isWin: win });
         // 如果中奖，把券加入list
         if (win) {
           for (var i in this.data.winTicket) {
@@ -163,7 +196,7 @@ Component({
           }
         }
       }
-        
+
     },
 
     // 判断是否中奖
@@ -174,10 +207,10 @@ Component({
       for (var i = 0; i < like.length; i++) {
         if (like[i] == true) {
           // console.log(this.data.list);
-          ticket.push(this.data.listCopy[cnt]);   
+          ticket.push(this.data.listCopy[cnt].origindata);
           // 这里从拷贝的那一份列表里把可能中奖的商品加进去，到时候需要在商品里加入ticket属性（优惠券），可以直接push ticket属性
           cnt++;
-        } 
+        }
       }
       console.log(ticket);
       // 不管中没中奖，都要把东西加到收藏夹
@@ -188,60 +221,60 @@ Component({
       if (cnt == 0)
         return false;
       else if (cnt == 1) {
-        if (rand > 0.15)   { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.15) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 2) {
-        if (rand > 0.25)   { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.25) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 3) {
-        if (rand > 0.35)   { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.35) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 4) {
-        if (rand > 0.5)   { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.5) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 5) {
-        if (rand > 0.65)   { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.65) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 6) {
-        if (rand > 0.75)   { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.75) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 7) {
-        if (rand > 0.85)   { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.85) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 8) {
-        if (rand > 0.9)  { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.9) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 9) {
-        if (rand > 0.95)  { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.95) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
       else if (cnt == 10) {
-        if (rand > 0.98)   { this.setData({winTicket: ticket}); return true;}
-        else              return false;
+        if (rand > 0.98) { this.setData({ winTicket: ticket }); return true; }
+        else return false;
       }
     },
 
     // 格式化日期：yyyy.MM.dd
     formatDate(date) {
-        var myyear = date.getFullYear();
-        var mymonth = date.getMonth() + 1;
-        var myweekday = date.getDate();
-    
-        // if (mymonth < 10) {
-        //     mymonth = "0" + mymonth;
-        // }
-        // if (myweekday < 10) {
-        //     myweekday = "0" + myweekday;
-        // }
-        return (myyear + "." + mymonth + "." + myweekday);
+      var myyear = date.getFullYear();
+      var mymonth = date.getMonth() + 1;
+      var myweekday = date.getDate();
+
+      // if (mymonth < 10) {
+      //     mymonth = "0" + mymonth;
+      // }
+      // if (myweekday < 10) {
+      //     myweekday = "0" + myweekday;
+      // }
+      return (myyear + "." + mymonth + "." + myweekday);
     },
 
     // 获取今天的日期
@@ -255,7 +288,7 @@ Component({
       // console.log(item);
       // console.log(date);
       // 6.5 确定可以搞到对应的信息了
-      getLoveList().then(function (data){
+      getLoveList().then(function (data) {
         var info = data.data;
         var changeInfo;
         for (var i in info) {
@@ -264,30 +297,34 @@ Component({
           }
         }
         if (!changeInfo)
-          info.unshift({time: date, 
-            bakeIdeas: [{id: item.id,
+          info.unshift({
+            time: date,
+            bakeIdeas: [{
+              id: item.id,
               title: item.title,
               image: item.cover,
               likeState: true,
-              tag: item.tags,
-              voteCount: item.voteCount,}]})
-        else 
+              tag: item.tag,
+              voteCount: 5,
+            }]
+          })
+        else
           changeInfo.bakeIdeas.push({
             id: item.id,
             title: item.title,
             image: item.cover,
             likeState: true,
-            tag: item.tags,
-            voteCount: item.voteCount,
+            tag: item.tag,
+            voteCount: 5,
           })
       })
-      getLoveList().then(function (data){
+      getLoveList().then(function (data) {
         console.log(data);
       })
     },
 
     addToTickets(item) {
-      getTickets().then(function (data){
+      getTickets().then(function (data) {
         var info = data.data;
         info.push({
           ticketType: item.ticketType,

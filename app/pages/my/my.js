@@ -2,7 +2,7 @@
 Page({
   data: {
     currentUser: {
-      name: '什么鬼',
+      name: 'AAA',
       credit: 10,
       member: '高级会员',
     },

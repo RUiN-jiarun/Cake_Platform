@@ -49,7 +49,7 @@ page {
   margin-bottom: 15rpx;
 }
 .idea-section-body__tag {
-  background: #f8f8f8;
+  background: #ddb6b987;
   font-size: 24rpx;
   color: #999;
   line-height: 24rpx;

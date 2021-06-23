@@ -14,7 +14,7 @@
           {{eachIdea.title}}
         </view>
         <view class="idea-section-body__tag" a:for="{{eachIdea.tag}}" a:for-item="eachTag">
-          {{eachTag.name}}
+          {{eachTag.name?eachTag.name:eachTag}}
         </view>
         <view class="idea-section-body__time">
           {{eachIdea.time}}

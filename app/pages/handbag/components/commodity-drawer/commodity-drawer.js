@@ -84,11 +84,11 @@ Component({
     },
     onLikeComments(e) {
       var attr = e.currentTarget.dataset.attr;
-      var key=  'currentCommodity.comments['+attr.toString()+'].likeState';
-      var ostate=this.data.currentCommodity.comments[attr].likeState
-      var nstate=!ostate;
+      var key = 'currentCommodity.comments[' + attr.toString() + '].likeState';
+      var ostate = this.data.currentCommodity.comments[attr].likeState
+      var nstate = !ostate;
 
-      this.setData({[key]:nstate});
+      this.setData({ [key]: nstate });
       // this.data.currentCommodity.comments[attr].likeState = !state;
 
       console.log(nstate);
@@ -102,18 +102,37 @@ Component({
       //   content: e.detail.value.textarea,
       // });
     },
+    formatDate(date) {
+      var myyear = date.getFullYear();
+      var mymonth = date.getMonth() + 1;
+      var myweekday = date.getDate();
+  
+      // if (mymonth < 10) {
+      //     mymonth = "0" + mymonth;
+      // }
+      // if (myweekday < 10) {
+      //     myweekday = "0" + myweekday;
+      // }
+      return (myyear + "." + mymonth + "." + myweekday);
+  },
+    getToday() {
+      var date = new Date();
+      return this.formatDate(date);
+    },
     AddNewComment(remark) {
+      const commentNum=this.data.currentCommodity.comments.length;
+      var dateToday=this.getToday();
       var ncom =
       {
-        id: 2,
+        id: commentNum,
         name: "什么鬼",
         useravatar: "https://gw.alipayobjects.com/mdn/rms_107da2/afts/img/A*O-qpSpu9vgQAAAAAAAAAAABkARQnAQ",
         description: remark,
-        time: "2021-6-17",
+        time: dateToday,
         likeState: false,
         num: 0
       };
-      this.setData({ 'currentCommodity.comments': [...this.data.currentCommodity.comments, ncom]});
+      this.setData({ 'currentCommodity.comments': [...this.data.currentCommodity.comments, ncom] });
 
     }
   },

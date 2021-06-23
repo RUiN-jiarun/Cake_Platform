@@ -43,11 +43,46 @@
 .masonry-item__body {
   margin-bottom: 15rpx;
 }
-.masonry-item__title {
-  font-size: 26rpx;
+.masonry-item-head {
+  
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-column-gap: 10rpx;
+}
+.masonry-item-head_title{
+font-size: 30rpx;
   color: #333;
   text-align: left;
-  line-height: 37rpx;
+  line-height: 40rpx;
+}
+.masonry-item-head_dis{
+  font-size: 24rpx;
+  text-align: right;
+  color: #ddb6b9;
+  margin-top:6rpx;
+}
+.masonry-item__shop{
+  color: #ddb6b9;
+  text-align: left;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  margin-top: 15rpx;
+  margin-bottom: 15rpx;
+  display: grid;
+  grid-template-columns: 8% 90%;
+  grid-column-gap: 10rpx;
+}
+.masonry-item__tag{
+  background-color: #ddb6b987;
+  font-size: 24rpx;
+  color: #999;
+  line-height: 24rpx;
+  padding: 8rpx 10rpx 8rpx 10rpx;
+  margin-top: 15rpx;
+  border-radius: 6rpx;
+  margin-bottom: 15rpx;
+  margin-right: 20rpx;
+  display: inline-block;
 }
 .masonry-item__self-pick-up {
   display: inline-block;

@@ -37,22 +37,24 @@
       <view className='images-box'
             style = "transform:rotate({{tiltAngle[index]}}deg)" >
         <view display="inline-box">
-          <image src={{item.cover}} className='images'></image>
+          <image src={{item.origindata.cover}} className='images'></image>
           <view className="basic-info" display="flex">
-            <view className="title">{{item.title}}
-              <view className="shop">{{item.shop}}
+            <view className="title">{{item.origindata.title}}
+              <view className="shop">{{item.origindata.shop}}
+                <view className="distance">{{item.origindata.distance}}
+                </view>
               </view>
             </view>
           </view>
         </view>
         <view className="divider"></view>
         <view className="tag">
-          <view class="order-section-body__tag" a:for="{{item.tag}}" a:for-item="t">
+          <view class="order-section-body__tag" a:for="{{item.origindata.tag}}" a:for-item="t">
             {{t.name}}
           </view>
         </view>
         <view className="divider"></view>
-        <view className="description">{{item.description}}</view>
+        <view className="description">{{item.origindata.description}}</view>
       </view>
        
       </movable-view>

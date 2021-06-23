@@ -21,6 +21,19 @@
       </view>
     </view>
   </view>
+
+  <view class="page-section">
+    <view class="page-section-title">请选择使用以下哪种券</view>
+      <view class="form-row">
+        <view class="form-row-content">
+          <radio-group name="lib">
+            <label><radio value="试吃券" />试吃券</label> 
+            <label><radio value="优惠券" />打折优惠券</label>
+          </radio-group>
+        </view>
+    </view>
+  </view>
+
   
   <view class="page-section">
     <view class="page-section-title">原料说明</view>

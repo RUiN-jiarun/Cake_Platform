@@ -25,6 +25,10 @@ page {
   padding: 16rpx 32rpx;
 }
 
+.page-section-text {
+  padding: 8rpx 16rpx;
+}
+
 .page-section-demo {
   padding: 32rpx;
 }
@@ -95,6 +99,7 @@ button {
   background-color: #ddd;
   margin-left: 30rpx;
 }
+
 
 /* 确定按钮————改编成收藏按钮或投票按钮 */
 .commodity-confirm {

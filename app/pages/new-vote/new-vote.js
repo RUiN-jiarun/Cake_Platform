@@ -1,4 +1,5 @@
 import { allCommodity } from '../../services/__mock__/commodity';
+import { getMyList } from '../../services/commodity';
 
 Page({
 
@@ -71,6 +72,7 @@ Page({
       duration: 3000,
     });
     this.addToAll(e.detail.value, this.data.compressedSrc);
+    this.addToMyVote(e.detail.value, this.data.compressedSrc)
     my.switchTab({ url: '/pages/handbag/handbag' });
   },
 
@@ -85,5 +87,21 @@ Page({
 
     })
   },
+
+  addToMyVote(item, pic) {
+    var num = allCommodity.data.length - 1;
+    getMyList().then(function (data){
+      var info = data.data;
+     
+      info.unshift(
+        {id: num,
+          title: item.name,
+          image: pic,
+          likeState: true,
+          tag: item.tags,
+          voteCount: 0,})
+      
+    })
+  }
 
 });
